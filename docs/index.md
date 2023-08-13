@@ -12,7 +12,7 @@ hero:
   actions:
     - text: Go -->
       link: /fe/es6/
-    - text: 前端导航
+    - text: Project
       link: /nav
       theme: alt
 features:
