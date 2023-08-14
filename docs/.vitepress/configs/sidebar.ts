@@ -61,6 +61,35 @@ export const sidebar: DefaultTheme.Config["sidebar"] = {
       ],
     },
   ],
+  "/deploy/": [
+    {
+      text: "Github Action",
+      collapsed: false,
+      items: [
+        { text: "Github Action 简介", link: "/deploy/GithubAction/简介" },
+        {
+          text: "自动部署 Github Page",
+          link: "/deploy/GithubAction/githubpage",
+        },
+        { text: "自动部署 Gitee Page", link: "/deploy/GithubAction/giteepage" },
+        { text: "部署阿里云", link: "/deploy/GithubAction/部署阿里云" },
+      ],
+    },
+    {
+      text: "Docker",
+      collapsed: false,
+      items: [{ text: "Docker 简介", link: "/deploy/docker/简介" }],
+    },
+    // {
+    //   text: "常用工具/方法",
+    //   collapsed: false,
+    //   items: [
+    //     { text: "工具库整理", link: "/workflow/utils/library" },
+    //     { text: "常用正则整理", link: "/workflow/utils/regexp" },
+    //     { text: "常用方法整理", link: "/workflow/utils/function" },
+    //   ],
+    // },
+  ],
   "/workflow/": [
     {
       text: "常用工具/方法",

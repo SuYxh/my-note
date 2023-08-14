@@ -35,6 +35,22 @@ export const nav: DefaultTheme.Config["nav"] = [
   },
   // { text: '源码阅读', link: '/analysis/utils/only-allow', activeMatch: '^/analysis' },
   {
+    text: "构建",
+    items: [
+      { text: "webpack", link: "/build/webpack/" },
+      { text: "vite", link: "/build/vite/" },
+    ],
+    activeMatch: "^/build",
+  },
+  {
+    text: "部署",
+    items: [
+      { text: "Github Action", link: "/deploy/GithubAction/" },
+      { text: "Docker", link: "/deploy/docker/" },
+    ],
+    activeMatch: "^/deploy",
+  },
+  {
     text: "Workflow",
     items: [
       {
