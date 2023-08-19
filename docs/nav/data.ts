@@ -68,6 +68,18 @@ export const NAV_DATA: NavData[] = [
         desc: "一个破烂的 UI",
         link: "https://www.npmjs.com/package/iron-ui",
       },
+      {
+        icon: "https://qn.huat.xyz/mac/202308191938912.png",
+        title: "vscode 插件demo",
+        desc: "新功能都会在这里进行开发、尝试",
+        link: "https://github.com/SuYxh/vscode-extension-demo",
+      },
+      {
+        icon: "https://qn.huat.xyz/mac/202308191938912.png",
+        title: "Yao",
+        desc: "一款高效的vscode插件, 支持 UI 库自动导入、内置 GPT4等",
+        link: "https://marketplace.visualstudio.com/items?itemName=y170088888.zz-yao",
+      },
     ],
   },
   {
