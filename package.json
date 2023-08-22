@@ -16,23 +16,32 @@
   "homepage": "https://github.com/SuYxh/my-note#readme",
   "author": "dahuang <1806328384@qq.com>",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development vitepress dev docs",
+    "dev": "cross-env NODE_ENV=development vitepress dev docs --port 5174",
     "build": "vitepress build docs",
     "build:github": "cross-env APP_BASE_PATH=/my-note/ npm run build",
     "lint": "prettier --write .",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "serve": "vite --port 5175",
+    "build:page": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.3.4"
   },
   "devDependencies": {
     "@mdit-vue/shared": "^0.12.0",
     "@types/node": "^18.13.0",
+    "@vitejs/plugin-vue": "^4.2.3",
     "cross-env": "^7.0.3",
     "husky": "^8.0.3",
     "lint-staged": "^13.1.2",
     "prettier": "^2.8.4",
     "sass": "^1.58.3",
     "sitemap": "^7.1.1",
+    "typescript": "^5.0.2",
+    "vite": "^4.4.5",
     "vitepress": "1.0.0-alpha.60",
-    "vue": "^3.2.47"
+    "vue-tsc": "^1.8.8"
   },
   "lint-staged": {
     "*.{js,ts,css,md,json}": [
