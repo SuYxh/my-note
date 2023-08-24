@@ -7,7 +7,7 @@
     "esModuleInterop": true,
     "resolveJsonModule": true,
     "allowJs": true,
-    "strict": true,
+    "strict": false,
     "jsx": "preserve"
   },
   "include": ["env.d.ts", "**/.vitepress/**/*"]

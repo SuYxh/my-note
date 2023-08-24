@@ -88,6 +88,10 @@ export const nav: DefaultTheme.Config["nav"] = [
           { text: "WebStorm 配置", link: "/efficiency/software/webstorm" },
         ],
       },
+      {
+        text: "抓包工具",
+        items: [{ text: "Whistle", link: "/efficiency/whistle" }],
+      },
       { text: "在线工具", link: "/efficiency/online-tools" },
       { text: "书签脚本", link: "/efficiency/bookmark-scripts" },
     ],
@@ -96,6 +100,10 @@ export const nav: DefaultTheme.Config["nav"] = [
   {
     text: "Me",
     items: [
+      {
+        text: "interview",
+        link: "https://fe-interview-sigma.vercel.app/",
+      },
       {
         text: "个人主页",
         link: "https://www.yuque.com/jarvis-zzzhw/frontend?# 《Front-End》",
