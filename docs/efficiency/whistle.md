@@ -68,7 +68,7 @@ http://127.0.0.1:8899/
 
 #### Chrome 代理设置
 
-安装 Chrome 代理插件：推荐安装[SwitchyOmega]()
+安装 Chrome 代理插件：推荐安装 SwitchyOmega
 
 备用下载地址：https://github.com/FelisCatus/SwitchyOmega/releases
 

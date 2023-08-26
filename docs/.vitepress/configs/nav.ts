@@ -1,16 +1,21 @@
 import type { DefaultTheme } from "vitepress";
 
 export const nav: DefaultTheme.Config["nav"] = [
-  { text: "项目", link: "/nav", activeMatch: "^/nav" },
+  { text: "我的项目", link: "/nav", activeMatch: "^/nav" },
   {
     text: "前端基础",
     items: [
-      { text: "JavaScript 基础知识", link: "/fe/javascript/types" },
-      { text: "ES6 常用知识", link: "/fe/es6/" },
-      { text: "TypeScript 基础知识", link: "/fe/typescript/base" },
-      { text: "浏览器相关知识", link: "/fe/browser/" },
       {
-        text: "CSS 相关",
+        text: "JavaScript",
+        items: [
+          { text: "JavaScript 基础知识", link: "/fe/javascript/types" },
+          { text: "ES6 常用知识", link: "/fe/es6/" },
+          { text: "TypeScript 基础知识", link: "/fe/typescript/base" },
+          { text: "浏览器相关知识", link: "/fe/browser/" },
+        ],
+      },
+      {
+        text: "CSS",
         items: [
           { text: "CSS 语法", link: "/fe/css/spec" },
           { text: "CSS 奇淫技巧", link: "/fe/css/tricks" },
@@ -35,47 +40,61 @@ export const nav: DefaultTheme.Config["nav"] = [
   },
   // { text: '源码阅读', link: '/analysis/utils/only-allow', activeMatch: '^/analysis' },
   {
-    text: "构建",
+    text: "构建部署",
     items: [
-      { text: "webpack", link: "/build/webpack/" },
-      { text: "vite", link: "/build/vite/" },
+      {
+        text: "包管理工具",
+        items: [{ text: "npm", link: "/package/npm" }],
+      },
+      {
+        text: "构建",
+        items: [
+          { text: "webpack", link: "/build/webpack/" },
+          { text: "vite", link: "/build/vite/" },
+        ],
+      },
+      {
+        text: "部署",
+        items: [
+          { text: "Github Action", link: "/deploy/GithubAction/" },
+          { text: "Docker", link: "/deploy/docker/" },
+        ],
+      },
     ],
     activeMatch: "^/build",
   },
   {
-    text: "部署",
-    items: [
-      { text: "Github Action", link: "/deploy/GithubAction/" },
-      { text: "Docker", link: "/deploy/docker/" },
-    ],
-    activeMatch: "^/deploy",
-  },
-  {
-    text: "Workflow",
+    text: "工具",
     items: [
       {
-        text: "常用工具/方法",
+        text: "开发常用",
         items: [
-          { text: "工具库整理", link: "/workflow/utils/library" },
-          { text: "常用正则整理", link: "/workflow/utils/regexp" },
-          { text: "常用方法整理", link: "/workflow/utils/function" },
+          { text: "第三方库", link: "/workflow/utils/library" },
+          { text: "在线工具", link: "/efficiency/online-tools" },
+          { text: "常用正则", link: "/workflow/utils/regexp" },
         ],
       },
-      { text: "npm 常用命令", link: "/workflow/node/npm" },
-      { text: "Zsh 配置", link: "/workflow/terminal/zsh" },
-      { text: "命令行工具", link: "/workflow/terminal/toolkit" },
-      { text: "Shell 命令", link: "/workflow/terminal/shell" },
-      { text: "Git 相关技巧", link: "/workflow/git/" },
-      { text: "Git 命令清单", link: "/workflow/git/command" },
-    ],
-    activeMatch: "^/workflow",
-  },
-  { text: "踩坑记录", link: "/pit/npm", activeMatch: "^/pit" },
-  {
-    text: "提效工具",
-    items: [
       {
-        text: "软件推荐与配置",
+        text: "命令行工具",
+        items: [
+          { text: "Zsh 配置", link: "/workflow/terminal/zsh" },
+          { text: "命令行工具", link: "/workflow/terminal/toolkit" },
+          { text: "Shell 命令", link: "/workflow/terminal/shell" },
+        ],
+      },
+      {
+        text: "Git",
+        items: [
+          { text: "Git 相关技巧", link: "/workflow/git/" },
+          { text: "Git 命令清单", link: "/workflow/git/command" },
+        ],
+      },
+      {
+        text: "抓包工具",
+        items: [{ text: "Whistle", link: "/efficiency/whistle" }],
+      },
+      {
+        text: "常用软件",
         items: [
           { text: "多平台软件", link: "/efficiency/software/cross-platform" },
           { text: "Mac 平台", link: "/efficiency/software/mac" },
@@ -88,15 +107,10 @@ export const nav: DefaultTheme.Config["nav"] = [
           { text: "WebStorm 配置", link: "/efficiency/software/webstorm" },
         ],
       },
-      {
-        text: "抓包工具",
-        items: [{ text: "Whistle", link: "/efficiency/whistle" }],
-      },
-      { text: "在线工具", link: "/efficiency/online-tools" },
-      { text: "书签脚本", link: "/efficiency/bookmark-scripts" },
     ],
-    activeMatch: "^/efficiency",
+    activeMatch: "^/workflow",
   },
+  { text: "踩坑记录", link: "/pit/npm", activeMatch: "^/pit" },
   {
     text: "Me",
     items: [
