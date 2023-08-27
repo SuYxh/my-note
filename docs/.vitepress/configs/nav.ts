@@ -110,6 +110,16 @@ export const nav: DefaultTheme.Config["nav"] = [
     ],
     activeMatch: "^/workflow",
   },
+  {
+    text: "计算机基础",
+    items: [
+      {
+        text: "数据结构与算法",
+        link: "/dataStructure/index",
+      },
+    ],
+    activeMatch: "^/power",
+  },
   { text: "踩坑记录", link: "/pit/npm", activeMatch: "^/pit" },
   {
     text: "ChatGPT",

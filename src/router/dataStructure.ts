@@ -20,7 +20,7 @@ const dataStructureRoutes: Array<RouteRecordRaw> = [
           path: "/dataStructure/stack",
         },
         component: async () => {
-          return await import("@/views/dataStructure/stack/index.vue");
+          return await import("@/views/dataStructure/Stack/index.vue");
         },
       },
       {
@@ -31,7 +31,7 @@ const dataStructureRoutes: Array<RouteRecordRaw> = [
           path: "/dataStructure/tree",
         },
         component: async () => {
-          return await import("@/views/dataStructure/tree/index.vue");
+          return await import("@/views/dataStructure/Tree/index.vue");
         },
       },
     ],

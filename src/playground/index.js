@@ -1,23 +1,16 @@
-const a = { val: "a" };
-const b = { val: "b" };
-const c = { val: "c" };
-const d = { val: "d" };
-a.next = b;
-b.next = c;
-c.next = d;
+const nums1 = [1, 2, 2, 1],
+  nums2 = [2, 2];
 
-// 在 c 和 d 之间插入 e
-const e = { val: "e" };
-c.next = e;
-e.next = d;
+function jiaoji(nums1, nums2) {
+  const arr = [];
 
-// 删除 e
-c.next = d;
+  nums1.forEach((item) => {
+    if (nums2.includes(item) && !arr.includes(item)) {
+      arr.push(item);
+    }
+  });
 
-// 遍历链表
-let p = a;
-
-while (p) {
-  console.log(p.val);
-  p = p.next;
+  return arr;
 }
+
+console.log("-->", jiaoji(nums1, nums2));
