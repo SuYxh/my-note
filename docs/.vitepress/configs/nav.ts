@@ -80,6 +80,7 @@ export const nav: DefaultTheme.Config["nav"] = [
           { text: "Zsh 配置", link: "/workflow/terminal/zsh" },
           { text: "命令行工具", link: "/workflow/terminal/toolkit" },
           { text: "Shell 命令", link: "/workflow/terminal/shell" },
+          { text: "xh-cli", link: "/workflow/terminal/xhcli" },
         ],
       },
       {

@@ -90,6 +90,17 @@ export const sidebar: DefaultTheme.Config["sidebar"] = {
     //   ],
     // },
   ],
+  "/workflow/terminal/": [
+    {
+      text: "命令行工具",
+      collapsed: false,
+      items: [
+        { text: "Zsh 配置", link: "/workflow/terminal/zsh" },
+        { text: "命令行工具", link: "/workflow/terminal/toolkit" },
+        { text: "Shell 命令", link: "/workflow/terminal/shell" },
+      ],
+    },
+  ],
   "/workflow/": [
     {
       text: "常用工具/方法",
@@ -98,33 +109,6 @@ export const sidebar: DefaultTheme.Config["sidebar"] = {
         { text: "工具库整理", link: "/workflow/utils/library" },
         { text: "常用正则整理", link: "/workflow/utils/regexp" },
         { text: "常用方法整理", link: "/workflow/utils/function" },
-      ],
-    },
-    {
-      text: "CSS 相关",
-      collapsed: false,
-      items: [
-        { text: "CSS 语法", link: "/workflow/css/spec" },
-        { text: "CSS 奇淫技巧", link: "/workflow/css/tricks" },
-        { text: "Sass 常用技巧", link: "/workflow/sass/" },
-      ],
-    },
-    {
-      text: "Vue 相关",
-      link: "/workflow/vue/",
-    },
-    {
-      text: "Node 相关",
-      // collapsed: false,
-      items: [{ text: "npm 常用命令", link: "/workflow/node/npm" }],
-    },
-    {
-      text: "终端相关",
-      collapsed: false,
-      items: [
-        { text: "Zsh 配置", link: "/workflow/terminal/zsh" },
-        { text: "命令行工具", link: "/workflow/terminal/toolkit" },
-        { text: "Shell 命令", link: "/workflow/terminal/shell" },
       ],
     },
     {
