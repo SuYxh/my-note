@@ -1,5 +1,5 @@
 {
-  "index_name": "my-note_tmp",
+  "index_name": "my-note",
   "start_urls": ["https://suyxh.github.io/my-note/"],
   "rateLimit": 8,
   "maxDepth": 10,
