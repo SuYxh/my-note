@@ -87,3 +87,11 @@ function dfsLevelStack(root) {
 
 // dfsLevelRecursion(root)
 // dfsLevelStack(root)
+
+export default {
+  root,
+  dfsRecursion,
+  dfsStack,
+  dfsLevelStack,
+  dfsLevelRecursion,
+};

@@ -48,11 +48,11 @@ function bfsRecursion(nodeArray) {
 }
 
 // 基础bfs 【stack 版】
-function bfsStcak(root) {
+function bfsStack(root) {
   const q = [root];
   while (q.length > 0) {
     const n = q.shift();
-    console.log("bfsStcak -->", n.val);
+    console.log("bfsStack -->", n.val);
     n.children.forEach((child) => {
       q.push(child);
     });
@@ -81,7 +81,7 @@ function bfsRecursionLevel(nodeArray, level = 0, parent = null) {
 }
 
 // bfs 遍历时携带父级元素和层级 【stack版】
-function bfsStack(root) {
+function bfsStackLevel(root) {
   const q = [{ node: root, level: 0, parent: null }];
 
   while (q.length > 0) {
@@ -99,7 +99,15 @@ function bfsStack(root) {
 }
 
 // bfsRecursion([tree])
-// bfsStcak(tree)
+// bfsStack(tree)
 
-bfsRecursionLevel([tree]);
-bfsStack(tree);
+// bfsRecursionLevel([tree]);
+// bfsStack(tree);
+
+export default {
+  tree,
+  bfsRecursion,
+  bfsStack,
+  bfsRecursionLevel,
+  bfsStackLevel,
+};
