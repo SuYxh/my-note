@@ -5,6 +5,7 @@ import buildSidebar from "./modules/buildSidebar";
 import dataStructureSidebar from "./modules/dataStructureSidebar";
 import pit from "./modules/pitSidebar";
 import chatgptSidebar from "./modules/chatgptSidebar";
+import toolSidebar from "./modules/toolSidebar";
 
 export const sidebar: DefaultTheme.Config["sidebar"] = {
   // 前端基础
@@ -17,4 +18,5 @@ export const sidebar: DefaultTheme.Config["sidebar"] = {
   ...pit,
   ...dataStructureSidebar,
   ...chatgptSidebar,
+  ...toolSidebar,
 };

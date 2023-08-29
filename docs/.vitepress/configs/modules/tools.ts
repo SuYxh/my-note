@@ -7,6 +7,7 @@ const data = {
         { text: "第三方库", link: "/workflow/utils/library" },
         { text: "在线工具", link: "/efficiency/online-tools" },
         { text: "常用正则", link: "/workflow/utils/regexp" },
+        { text: "文档搭建", link: "/workflow/doc/index" },
       ],
     },
     {
