@@ -12,7 +12,10 @@ const sidebar = {
     {
       text: "调试方法",
       // collapsed: false,
-      items: [{ text: "远程调试", link: "/pit/debug/远程调试" }],
+      items: [
+        { text: "调试方法", link: "/pit/debug/调试方法" },
+        { text: "远程调试", link: "/pit/debug/远程调试" },
+      ],
     },
     {
       text: "常见效果",
