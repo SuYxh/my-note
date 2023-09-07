@@ -2,7 +2,7 @@
 import { computed } from 'vue'
 import { withBase } from 'vitepress'
 import { slugify } from '@mdit-vue/shared'
-
+import useMouse from '../hooks/useMouse';
 import { NavLink } from '../types'
 
 const props = defineProps<{
@@ -33,10 +33,12 @@ const formatBadge = computed(() => {
   }
   return props.badge
 })
+
+const { showTip, handleMmouseenter, handleMouseleave } = useMouse()
 </script>
 
 <template>
-  <a v-if="link" class="m-nav-link" :href="link" target="_blank" rel="noreferrer">
+  <div  class="m-nav-link" :href="link"  rel="noreferrer" @mouseenter="handleMmouseenter" @mouseleave="handleMouseleave">
     <article class="box" :class="{ 'has-badge': formatBadge }">
       <div class="box-header">
         <template v-if="!noIcon">
@@ -56,7 +58,11 @@ const formatBadge = computed(() => {
       <Badge v-if="formatBadge" class="badge" :type="formatBadge.type" :text="formatBadge.text" />
       <p v-if="desc" class="desc">{{ desc }}</p>
     </article>
-  </a>
+    <div v-if="showTip && (link || repo)" :class="{ 'link-tip': showTip }">
+      <a v-if="link" target="_blank" :href="link" class="tip center margin">page</a>
+      <a v-if="repo" target="_blank" :href="repo" class="tip center">repo</a>
+    </div>
+  </div>
 </template>
 
 <style lang="scss" scoped>
@@ -65,6 +71,7 @@ const formatBadge = computed(() => {
   --m-nav-icon-size: 24px;
   --m-nav-box-gap: 12px;
 
+  position: relative;
   display: block;
   border: 1px solid var(--vp-c-bg-soft);
   border-radius: 8px;
@@ -76,6 +83,37 @@ const formatBadge = computed(() => {
     border-color: var(--vp-c-brand);
     text-decoration: initial;
     background-color: var(--vp-c-bg-soft-up);
+  }
+
+  .link-tip {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.6);
+    transition: all 0.25s;
+
+    .tip {
+      width: 40%;
+      height: 80%;
+      background-color: var(--vp-c-bg-soft);
+      border-radius: 8px;
+    }
+
+    .margin {
+      margin-right: 12px;
+    }
+
+    .center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
   }
 
   .box {
