@@ -13,6 +13,8 @@ export interface NavLink {
   desc?: string;
   /** 站点链接 */
   link: string;
+  /** 仓库地址 */
+  repo?: string;
 }
 
 export interface NavData {

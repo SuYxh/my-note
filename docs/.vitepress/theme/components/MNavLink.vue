@@ -12,6 +12,7 @@ const props = defineProps<{
   title?: NavLink['title']
   desc?: NavLink['desc']
   link: NavLink['link']
+  repo: NavLink['repo']
 }>()
 
 const formatTitle = computed(() => {
