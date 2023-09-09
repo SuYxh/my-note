@@ -2,9 +2,14 @@ const data = {
   text: "Me",
   items: [
     {
-      text: "interview",
-      link: "https://fe-interview-sigma.vercel.app/",
+      text: "面试",
+      link: "/interview/index",
+      activeMatch: "^/interview",
     },
+    // {
+    //   text: "interview",
+    //   link: "https://fe-interview-sigma.vercel.app/",
+    // },
     {
       text: "个人主页",
       link: "https://www.yuque.com/jarvis-zzzhw/frontend?# 《Front-End》",

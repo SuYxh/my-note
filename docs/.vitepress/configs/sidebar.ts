@@ -7,6 +7,7 @@ import pit from "./modules/pitSidebar";
 import chatgptSidebar from "./modules/chatgptSidebar";
 import toolSidebar from "./modules/toolSidebar";
 import wxSidebar from "./modules/wxSidebar";
+import interviewSidebar from "./modules/interviewSidebar";
 
 export const sidebar: DefaultTheme.Config["sidebar"] = {
   // 前端基础
@@ -21,4 +22,5 @@ export const sidebar: DefaultTheme.Config["sidebar"] = {
   ...chatgptSidebar,
   ...toolSidebar,
   ...wxSidebar,
+  ...interviewSidebar,
 };

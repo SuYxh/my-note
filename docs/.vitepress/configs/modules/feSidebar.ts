@@ -26,26 +26,49 @@ const sidebar = {
       text: "css",
       collapsed: false,
       items: [
-        {
-          text: "css",
-          link: "/fe/css/",
-        },
-        { text: "CSS 语法", link: "/fe/css/spec" },
-        { text: "CSS 奇淫技巧", link: "/fe/css/tricks" },
-        { text: "Sass 常用技巧", link: "/fe/sass/index" },
+        { text: "基础", link: "/fe/css/" },
+        { text: "选择器", link: "/fe/css/selector" },
+        { text: "flex", link: "/fe/css/flex" },
+        { text: "布局", link: "/fe/css/layout" },
+        { text: "定位", link: "/fe/css/position" },
+        { text: "图文样式", link: "/fe/css/graphicTextStyles" },
+        { text: "响应式", link: "/fe/css/responsive" },
+        { text: "CSS3", link: "/fe/css/css3" },
+        { text: "技巧", link: "/fe/css/tricks" },
       ],
     },
+    {
+      text: "less",
+      collapsed: false,
+      items: [{ text: "基础", link: "/fe/sass/index" }],
+    },
+    {
+      text: "scss",
+      collapsed: false,
+      items: [{ text: "基础", link: "/fe/sass/index" }],
+    },
+    // {
+    //   text: "常见效果",
+    //   collapsed: false,
+    //   items: [
+    //     { text: "Scss 常用技巧", link: "/fe/sass/index" },
+    //   ],
+    // },
   ],
   "/fe/javascript/": [
     {
       text: "JavaScript 基础知识",
       collapsed: false,
       items: [
+        { text: "简介", link: "/fe/javascript/base" },
         { text: "数据类型", link: "/fe/javascript/types" },
         { text: "引用类型的拷贝", link: "/fe/javascript/clone" },
         { text: "类型转换", link: "/fe/javascript/conversions" },
         { text: "原型和原型链", link: "/fe/javascript/prototype" },
         { text: "继承", link: "/fe/javascript/inherit" },
+        { text: "作用域", link: "/fe/javascript/actionScope" },
+        { text: "闭包", link: "/fe/javascript/closure" },
+        { text: "this", link: "/fe/javascript/this" },
         {
           text: "编程题",
           link: "/fe/coding/",
