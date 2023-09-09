@@ -1,9 +1,13 @@
 const data = {
-  text: "计算机基础",
+  text: "专题",
   items: [
     {
       text: "数据结构与算法",
       link: "/dataStructure/index",
+    },
+    {
+      text: "微信相关",
+      link: "/weixin/index",
     },
   ],
   activeMatch: "^/power",
