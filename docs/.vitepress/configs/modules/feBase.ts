@@ -6,7 +6,6 @@ const data = {
     { text: "CSS", link: "/fe/css/index" },
     { text: "JavaScript", link: "/fe/javascript/types" },
     { text: "ECMAScript 6", link: "/fe/es6/" },
-    { text: "Promise", link: "/fe/promise/index" },
     { text: "TypeScript", link: "/fe/typescript/base" },
     { text: "浏览器相关", link: "/fe/browser/index" },
     { text: "network", link: "/fe/network/index" },

@@ -69,9 +69,41 @@ const sidebar = {
         { text: "作用域", link: "/fe/javascript/actionScope" },
         { text: "闭包", link: "/fe/javascript/closure" },
         { text: "this", link: "/fe/javascript/this" },
+        { text: "event loop", link: "/fe/javascript/eventloop" },
+        { text: "编程题", link: "/fe/coding/" },
+      ],
+    },
+    {
+      text: "Promise",
+      collapsed: false,
+      items: [
         {
-          text: "编程题",
-          link: "/fe/coding/",
+          text: "Promise",
+          link: "/fe/javascript/promise/index",
+        },
+        {
+          text: "手写实现",
+          link: "/fe/javascript/promise/手写实现",
+        },
+        {
+          text: "并发控制",
+          link: "/fe/javascript/promise/任务执行",
+        },
+        {
+          text: "技巧",
+          link: "/fe/javascript/promise/案例",
+        },
+        {
+          text: "输出题",
+          link: "/fe/javascript/promise/输出题",
+        },
+        {
+          text: "迭代器",
+          link: "/fe/javascript/promise/迭代器",
+        },
+        {
+          text: "生成器",
+          link: "/fe/javascript/promise/生成器",
         },
       ],
     },
