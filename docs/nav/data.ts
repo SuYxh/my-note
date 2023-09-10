@@ -62,6 +62,13 @@ export const NAV_DATA: NavData[] = [
         repo: "https://gitee.com/ironc/xh-cli",
       },
       {
+        icon: "https://qn.huat.xyz/mac/202309071129540.png",
+        title: "xh-cli-server",
+        desc: "xh-cli 的服务端",
+        link: "https://gitee.com/ironc/xh-cli-server",
+        repo: "https://gitee.com/ironc/xh-cli-server",
+      },
+      {
         icon: "https://qn.huat.xyz/mac/202309071130272.png",
         title: "工具库",
         desc: "开发中常用的工具函数、自动生成文档",
