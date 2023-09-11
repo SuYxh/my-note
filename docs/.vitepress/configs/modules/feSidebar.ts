@@ -57,7 +57,7 @@ const sidebar = {
   ],
   "/fe/javascript/": [
     {
-      text: "JavaScript 基础知识",
+      text: "基础",
       collapsed: false,
       items: [
         { text: "简介", link: "/fe/javascript/base" },
@@ -71,6 +71,16 @@ const sidebar = {
         { text: "this", link: "/fe/javascript/this" },
         { text: "event loop", link: "/fe/javascript/eventloop" },
         { text: "编程题", link: "/fe/coding/" },
+      ],
+    },
+    {
+      text: "事件",
+      collapsed: false,
+      items: [
+        { text: "事件流", link: "/fe/javascript/event/事件流" },
+        { text: "事件处理程序", link: "/fe/javascript/event/事件处理程序" },
+        { text: "事件对象", link: "/fe/javascript/event/事件对象" },
+        { text: "事件类型", link: "/fe/javascript/event/事件类型" },
       ],
     },
     {
