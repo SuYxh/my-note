@@ -25,6 +25,16 @@ const sidebar = {
         { text: "弹幕效果", link: "/pit/commonEffect/弹幕效果" },
       ],
     },
+    {
+      text: "常用功能",
+      collapsed: false,
+      items: [
+        {
+          text: "禁止浏览器快捷键保存页面",
+          link: "/pit/commonFunc/禁止浏览器快捷键保存页面",
+        },
+      ],
+    },
   ],
 };
 
