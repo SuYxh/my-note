@@ -166,8 +166,16 @@ const sidebar = {
       collapsed: false,
       items: [
         {
+          text: "简介",
+          link: "/fe/typescript/index",
+        },
+        {
           text: "typescript",
           link: "/fe/typescript/base",
+        },
+        {
+          text: "ts-study",
+          link: "/fe/typescript/ts-study",
         },
       ],
     },
