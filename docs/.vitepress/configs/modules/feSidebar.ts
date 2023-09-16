@@ -84,6 +84,15 @@ const sidebar = {
       ],
     },
     {
+      text: "网络",
+      collapsed: false,
+      items: [
+        { text: "xhr", link: "/fe/javascript/xhr/xhr" },
+        { text: "Fetch", link: "/fe/javascript/xhr/Fetch" },
+        { text: "跨域", link: "/fe/javascript/xhr/跨域" },
+      ],
+    },
+    {
       text: "Promise",
       collapsed: false,
       items: [
@@ -128,36 +137,6 @@ const sidebar = {
           link: "/fe/es6/",
         },
       ],
-    },
-  ],
-  "/fe/promise/": [
-    {
-      text: "Promise",
-      link: "/fe/promise/index",
-    },
-    {
-      text: "手写实现",
-      link: "/fe/promise/手写实现",
-    },
-    {
-      text: "任务执行",
-      link: "/fe/promise/任务执行",
-    },
-    {
-      text: "案例",
-      link: "/fe/promise/案例",
-    },
-    {
-      text: "输出题",
-      link: "/fe/promise/输出题",
-    },
-    {
-      text: "迭代器",
-      link: "/fe/promise/迭代器",
-    },
-    {
-      text: "生成器",
-      link: "/fe/promise/生成器",
     },
   ],
   "/fe/typescript/": [
