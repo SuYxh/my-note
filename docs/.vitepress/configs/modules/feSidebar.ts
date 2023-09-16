@@ -90,6 +90,8 @@ const sidebar = {
         { text: "xhr", link: "/fe/javascript/xhr/xhr" },
         { text: "Fetch", link: "/fe/javascript/xhr/Fetch" },
         { text: "跨域", link: "/fe/javascript/xhr/跨域" },
+        { text: "CORS", link: "/fe/javascript/xhr/CORS" },
+        { text: "缓存", link: "/fe/javascript/xhr/缓存" },
       ],
     },
     {
@@ -124,6 +126,15 @@ const sidebar = {
           text: "生成器",
           link: "/fe/javascript/promise/生成器",
         },
+      ],
+    },
+    {
+      text: "webStorage",
+      collapsed: false,
+      items: [
+        { text: "cookie", link: "/fe/javascript/webStorage/cookie" },
+        { text: "webStorage", link: "/fe/javascript/webStorage/webStorage" },
+        { text: "jwt", link: "/fe/javascript/webStorage/jwt" },
       ],
     },
   ],
