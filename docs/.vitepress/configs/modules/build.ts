@@ -19,6 +19,7 @@ const data = {
         { text: "Docker", link: "/deploy/docker/" },
       ],
     },
+    { text: "部署", link: "/deploy/index" },
     { text: "免费SSL", link: "/deploy/免费证书使用指南" },
   ],
   activeMatch: "^/build",
