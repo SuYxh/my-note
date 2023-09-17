@@ -7,15 +7,12 @@ const sidebar = {
     },
   ],
 
-  "/build/vite/": [
+  "/build/": [
     {
       text: "vite",
       collapsed: false,
       items: [{ text: "vite", link: "/build/vite/" }],
     },
-  ],
-
-  "/build/webpack/": [
     {
       text: "webpack",
       collapsed: false,
