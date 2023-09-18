@@ -1,5 +1,3 @@
-import cliSidebar from "./cliSidebar";
-
 const sidebar = {
   "/workflow/doc/": [
     {
@@ -11,7 +9,6 @@ const sidebar = {
       ],
     },
   ],
-  "/workflow/cli/": cliSidebar,
 };
 
 export default sidebar;
