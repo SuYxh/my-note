@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script>
+      function instanceOf(leftVaule, rightVaule) {
+        let rightProto = rightVaule.prototype // 取右表达式的 prototype 值
+        leftVaule = leftVaule.__proto__ // 取左表达式的__proto__值
+        while (true) {
+          if (leftVaule === null) {
+            return false
+          }
+          if (leftVaule === rightProto) {
+            return true
+          }
+          leftVaule = leftVaule.__proto__
+        }
+      }
+
+      console.log([] instanceof Array)
+      console.log(instanceOf([], Array))
+
+      function myInstanceOf(object, constructor) {
+        let prototype = Object.getPrototypeOf(object)
+        while (prototype !== null) {
+          if (prototype === constructor.prototype) {
+            return true
+          }
+          prototype = Object.getPrototypeOf(prototype)
+        }
+        return false
+      }
+
+      // 定义一个构造函数
+      function Person(name, age) {
+        this.name = name
+        this.age = age
+      }
+
+      // 创建一个实例
+      const person = new Person('Tom', 25)
+
+      // 使用myInstanceOf检查实例是否属于Person类
+      console.log(myInstanceOf(person, Person)) // true
+      console.log(myInstanceOf(person, Object)) // true
+      console.log(myInstanceOf(person, Array)) // false
+    </script>
+  </body>
+</html>

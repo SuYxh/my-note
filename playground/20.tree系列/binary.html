@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      #drop-zone {
+        width: 250px;
+        height: 250px;
+        background-color: aliceblue;
+      }
+
+      #preview {
+        width: 100px;
+        height: 100px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <iframe></iframe>
+    <br>
+    <input type="file" id="fileInput" multiple="multiple">
+    <br><br>
+    <img id="preview" />
+    <br><br><br>
+    <div id="drop-zone"></div>
+    <script>
+      /**
+       * @description: Blob 全称为 binary large object ，即二进制大对象，它是 JavaScript 中的一个对象，表示原始的类似文件的数据。
+       * @return {*}
+       */
+      function blobFunc () {
+        const iframe = document.getElementsByTagName("iframe")[0];
+        const blob = new Blob(["Hello World"], { type: "text/plain" });
+        const subBlob = blob.slice(0, 5);
+        iframe.src = URL.createObjectURL(subBlob);
+      }
+
+      blobFunc()
+
+      /**
+       * @description: 文件（File）接口提供有关文件的信息，并允许网页中的 JavaScript 访问其内容。实际上，File 对象是特殊类型的 Blob，且可以用在任意的 Blob 类型的 context 中。Blob 的属性和方法都可以用于 File 对象。
+       * @return {*}
+       */
+      function fileFunc () {
+        const fileInput = document.getElementById("fileInput");
+
+        fileInput.onchange = (e) => {
+          console.log(e.target.files);
+        }
+      }
+
+      fileFunc()
+
+      /**
+       * @description: 拖拽上传 .另一种获取 File 对象的方式就是拖放 API，这个 API 很简单，就是将浏览器之外的文件拖到浏览器窗口中，并将它放在一个成为拖放区域的特殊区域中。拖放区域用于响应放置操作并从放置的项目中提取信息。这些是通过 ondrop 和 ondragover 两个 API 实现的。
+       * @return {*}
+       */
+      function dropFunc () {
+        const dropZone = document.getElementById("drop-zone");
+
+        dropZone.ondragover = (e) => {
+          e.preventDefault();
+        }
+
+        dropZone.ondrop = (e) => {
+          e.preventDefault();
+          const files = e.dataTransfer.files;
+          console.log(files)
+        }
+      }
+
+      dropFunc()
+
+
+      function fileReaderFunc () {
+        const fileInput = document.getElementById("fileInput");
+        const preview = document.getElementById("preview");
+
+        const reader = new FileReader();
+
+        fileInput.onchange = (e) => {
+          console.log('onchange', e.target.files);
+          const file = e.target.files[0]
+          // type: "image/jpeg"
+          if (file.type.includes('image')) {
+            reader.readAsDataURL(file);
+          } else {
+            reader.readAsText(file);
+          }
+        }
+
+        reader.onload = (e) => {
+          console.log('onload', e);
+          console.log(e.target.result);
+          preview.src = e.target.result;
+        }
+
+        reader.onprogress = (e) => {
+          if (e.loaded && e.total) {
+            const percent = (event.loaded / event.total) * 100;
+            console.log(`上传进度: ${Math.round(percent)} %`);
+          }
+        }
+      }
+
+      fileReaderFunc()
+
+    </script>
+  </body>
+
+</html>

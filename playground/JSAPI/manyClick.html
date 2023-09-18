@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+
+  <body>
+    <button id="clickBtn1">单击</button>
+    <button id="clickBtn2">双击</button>
+    <button id="clickBtn3">单击双击同时存在</button>
+    <button id="clickBtn4">连续多次点击</button>
+
+
+
+
+
+    <script>
+      const oBtn1 = document.getElementById('clickBtn1');
+      oBtn1.onclick = function () {
+        console.log('单击');
+      }
+
+
+
+      const oBtn2 = document.getElementById('clickBtn2');
+      oBtn2.ondblclick = function () {
+        console.log('双击');
+      }
+
+      let timer1 = null;
+      const oBtn3 = document.getElementById('clickBtn3');
+      oBtn3.onclick = function () {
+        clearTimeout(timer1);
+        timer1 = setTimeout(function () {
+          clearTimeout(timer1);
+          console.log('单击');
+        }, 200)
+      }
+      oBtn3.ondblclick = function () {
+        clearTimeout(timer1);
+        console.log('双击');
+      }
+
+
+      var timer2 = null;
+      var waitTime = 200; // 该时间间隔内点击才算连续点击（单位：ms）
+      var lastTime = new Date().getTime(); // 上次点击时间
+      var count = 0; // 连续点击次数
+      // 获取对象
+      var oBtn4 = document.getElementById('clickBtn4');
+      oBtn4.onclick = function (event) {
+        var currentTime = new Date().getTime();
+        // 计算两次相连的点击时间间隔
+        count = (currentTime - lastTime) < waitTime ? count + 1 : 1;
+        lastTime = new Date().getTime();
+        clearTimeout(timer2);
+        timer2 = setTimeout(function () {
+          clearTimeout(timer2);
+          // 处理点击事件
+          console.log(count);
+
+          if (count > 4) {
+            // 连续点击五次或者五次以上的点击事件
+            console.log('点击超过4次了')
+          }
+        }, waitTime + 10)
+      };
+
+
+
+
+
+
+    </script>
+  </body>
+
+</html>

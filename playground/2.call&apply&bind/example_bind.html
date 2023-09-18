@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+
+  <body>
+
+    <div>
+      <button id="btn">点我</button>
+    </div>
+
+    <script>
+
+      const btn = document.getElementById("btn")
+
+      Function.prototype.x_bind = function (context, ...params) {
+        // this->func  context->obj  params->[10,20]
+        console.log('params', params);
+        let self = this;
+        return function proxy(...args) {
+          console.log('args', args);
+          // 把func执行并且改变this即可  args->是执行proxy的时候可能传递的值
+          console.log('全部参数:', (params.concat(args)), ...(params.concat(args)), ...params.concat(args));
+          self.apply(context, params.concat(args))
+          // self.call(context, ...params.concat(args))
+        }
+      }
+
+      function func(x, y, m, n) {
+        console.log(this, x, y);
+      }
+      let obj = {
+        name: 'OBJ'
+      };
+
+
+
+
+      // func函数基于__proto__找到Function.prototype.bind，把bind方法执行
+      //   在bind方法内部
+      //     和call/apply的区别：并没有把func立即执行
+      //     把传递进来的obj/10/20等信息存储起来「闭包」
+      //     执行bind返回一个新的函数 例如:proxy，把proxy绑定给元素的事件，当事件触发执行的是返回的proxy，在proxy内部，再去把func执行，把this和值都改变为之前存储的那些内容
+      let proxy = func.x_bind(obj, 10, 20)
+      // btn.addEventListener('click', func(10, 20));
+
+      // btn.addEventListener('click', func.bind(obj, 10, 20));
+      btn.addEventListener('click', func.x_bind(obj, 10, 20));
+      btn.addEventListener('click', proxy(99, 50))
+      // console.log('proxy', proxy);
+
+
+
+
+      let obj2 = {
+        name: 'yxh',
+      };
+      function original(a, b) {
+        console.log(this.name);
+        console.log([a, b]);
+        return false;
+      }
+
+
+      Function.prototype.myBind = function (context, ...params) {
+        const self = this
+        return function proxy(...args) {
+          self.apply(context, params.concat(args))
+        }
+      }
+
+      let bound = original.bind(obj, 1);
+      let bound2 = original.myBind(obj, 1);
+
+      let boundResult = bound(2);
+      let boundResult2 = bound2(2);
+    </script>
+  </body>
+
+</html>

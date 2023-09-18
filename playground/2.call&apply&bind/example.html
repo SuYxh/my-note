@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script>
+      /**
+       * @description: 手写call
+       * @param {*} context
+       * @param {array} args
+       * @return {*}
+       */
+      Function.prototype.myCall = function (context, ...args) {
+        // this 要处理的函数 fn 
+        if (typeof this !== "function") {
+          throw new TypeError(`${this} must be a function`)
+        }
+        if (!context) {
+          context = typeof window !== 'undefined' ? window : global
+        }
+        // context 有可能传非对象，必须保证 context 是一个对象类型
+        if (!/^(object|function)$/i.test(typeof context)) {
+          // context = new context.constructor(context); // 不适用于 Symbol/BigInt
+          context = Object(context)
+        }
+        const fn = Symbol("fn")
+        // 把函数作为对象的某个成员值
+        context[fn] = this
+        let result = context[fn](...args)
+        // 设置完成员属性后，删除
+        delete context[fn]
+
+        return result
+      }
+
+      // 测试
+      // const objForCall = {
+      //   name: 'jarvis',
+      //   sex: 'man'
+      // }
+
+      // function fnForCall () {
+      //   console.log(this, this.name, this.sex)
+      // }
+
+      // fnForCall()
+      // fnForCall.call(objForCall)
+      // fnForCall.myCall(objForCall)
+
+
+      /**
+       * @description: 手写apply
+       * @param {*} context
+       * @param {*} args
+       * @return {*}
+       */
+      Function.prototype.myApply = function (context, args) {
+        // this 要处理的函数 fn
+        if (typeof this !== 'function') {
+          throw new TypeError(`${this} is not a function`)
+        }
+        //  null，undefined，和不传时，context为 window
+        if (!context) {
+          context = typeof window !== 'undefined' ? window : global
+        }
+        // 必须保证 context 是一个对象类型
+        if (!/^(object|function)$/i.test(typeof context)) {
+          // context = new context.constructor(context); // 不适用于 Symbol/BigInt
+          context = Object(context)
+        }
+        const fn = Symbol('fn')
+        context[fn] = this // 把函数作为对象的某个成员值
+        // 如果 args 为 undefined 的时候，...args 会报错  TypeError: args is not iterable
+        args = args ? args : []
+        const result = context[fn](...args)
+        delete context[fn] // 设置完成员属性后，删除
+        return result
+      }
+
+      const objForApply = {
+        name: 'jarvis',
+        sex: 'man'
+      }
+
+      function fnForApply () {
+        console.log(this, this.name, this.sex)
+      }
+
+      fnForApply()
+      fnForApply.apply(objForApply)
+      fnForApply.myApply(objForApply)
+    </script>
+  </body>
+
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        width: 100%;
+        height: 200vh;
+        background-color: #eee;
+      }
+    </style>
+  </head>
+
+  <body>
+    <script>
+      // 防抖
+      function debounce(fn, delay) {
+        let timer = null
+        return function () {
+          timer && clearTimeout(timer)
+          timer = setTimeout(() => {
+            fn.call(this, arguments)
+          }, delay)
+        }
+      }
+
+      // 节流
+      function throttle(fn, delay) {
+        let lastTime = 0
+        return function () {
+          let nowTime = Date.now()
+          if (nowTime > lastTime + delay) {
+            fn.call(this, arguments)
+            lastTime = nowTime
+          }
+        }
+      }
+
+      function throttleSetTimeOut(fn, delay) {
+        let timer = null
+        return function () {
+          if (!timer) {
+            fn.call(this, arguments)
+            setTimeout(() => {
+              timer = null
+            }, delay)
+          }
+        }
+      }
+
+      // window.addEventListener(
+      //   'scroll',
+      //   debounce(() => {
+      //     console.log('debounce')
+      //   }, 500)
+      // )
+
+      // window.addEventListener(
+      //   'scroll',
+      //   throttle(() => {
+      //     console.log('throttle')
+      //   }, 300)
+      // )
+
+      /**
+       *@Author:
+       *@Description: 节流函数
+       * @param { Function }   fn 需要节流函数
+       * @param { Number }   wait 间隔时间差
+       * @param { Function }   callback  此回调函数用于获取函数返回值
+       */
+      const throwFunc = function (fn, wait, callback) {
+        let initTime = 0
+        return function () {
+          let nowTime = Date.now()
+          if ((nowTime = initTime >= wait)) {
+            let res = fn.apply(this, [...arguments])
+            if (typeof callback == 'function') callback(res)
+            initTime = nowTime
+          }
+        }
+      }
+
+      /**
+       *@Description: 防抖函数（简化版，项目需求够用了,也不是写啥子库，业务简单防抖就行，不需要花里胡哨的）
+       * @param { Function }   fn 需要防抖的函数
+       * @param { Number }   wait 间隔时间差
+       * @param { Boolean }   immediate 是否开始立即执行
+       * @param { Function }   callback  此回调函数用于获取函数返回值
+       */
+      const debounceFunc = function (fn, wait, immediate = false, callback) {
+        let timer = null
+        let ivoke = false
+        return function () {
+          if (timer) clearTimeout(timer)
+          if (immediate && !ivoke) {
+            let res = fn.apply(this, [...arguments])
+            if (typeof callback == 'function') callback(res)
+            ivoke = true
+          } else {
+            timer = setTimeout(() => {
+              let res = fn.apply(this, [...arguments])
+              if (typeof callback == 'function') callback(res)
+              ivoke = true
+            }, wait)
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

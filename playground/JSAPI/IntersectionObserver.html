@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .blank {
+        background-color: antiquewhite !important;
+        transition: background-color 2s;
+      }
+
+      .container>div {
+        margin: 5px auto;
+        width: 100px;
+        height: 100px;
+        outline: 1px solid red;
+        background-color: tomato;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>IntersectionObserver 埋点曝光
+    </h1>
+    <h3>当色块完全曝光，就改变颜色</h3>
+    参考代码：
+    <span>超好用的API之IntersectionObserver：https://juejin.cn/post/6844903874302574599#heading-2</span>
+    <div class="container">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+      <div class="item">7</div>
+      <div class="item">8</div>
+      <div class="item">9</div>
+      <div class="item">10</div>
+      <div class="item">11</div>
+      <div class="item">12</div>
+      <div class="item">13</div>
+      <div class="item">14</div>
+      <div class="item">15</div>
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+      <div class="item">7</div>
+      <div class="item">8</div>
+      <div class="item">9</div>
+      <div class="item">10</div>
+      <div class="item">11</div>
+      <div class="item">12</div>
+      <div class="item">13</div>
+      <div class="item">14</div>
+      <div class="item">15</div>
+    </div>
+
+    <script>
+      //找到所有的item标签，放到数组
+      const boxList = [...document.querySelectorAll('.item')]
+
+      var io = new IntersectionObserver((entries) => {
+        console.log('entries', entries)
+        console.log('io.takeRecords()', io.takeRecords())
+        entries.forEach(item => {
+          // console.log('item', item)
+          // intersectionRatio === 1说明该元素完全暴露出来，符合业务需求
+          if (item.intersectionRatio === 1) {
+            // 。。。 埋点曝光代码
+            item.target.setAttribute("class", "blank item");
+            console.log(item.target.innerText);
+            io.unobserve(item.target)
+          }
+        })
+      }, {
+        root: null,
+        threshold: 1, // 阀值设为1，当只有比例达到1时才触发回调函数
+      })
+
+      console.log('io', io)
+
+      // observe遍历监听所有box节点
+      boxList.forEach(box => {
+        console.log('box')
+        io.observe(box)
+      })
+
+      console.log('io-end', )
+    </script>
+  </body>
+
+</html>
