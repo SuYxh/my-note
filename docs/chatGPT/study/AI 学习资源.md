@@ -1,5 +1,19 @@
 # AI 学习资源
 
+ChatGPT+向量数据库搭建私有化知识库（一）
+
+https://juejin.cn/post/7227079326594859068
+
+万物皆可向量化，ChatGPT 也不例外
+
+https://zhuanlan.zhihu.com/p/605158166
+
+Milvus 中文文档
+
+https://www.milvus-io.com/manage_connection
+
+对应 npm 包： https://www.npmjs.com/package/@zilliz/milvus2-sdk-node
+
 (强推|双字)2022 吴恩达机器学习 Deeplearning.ai 课程
 
 https://www.bilibili.com/video/BV1Pa411X76s/?spm_id_from=333.337.search-card.all.click&vd_source=5d2251d2e7e1f6a6d8f3e704a6e0ea65
@@ -35,3 +49,18 @@ https://juejin.cn/post/7236028062873550908
 使用 langchain+ChatGPT 部署基于本地知识的检索系统
 
 https://zhuanlan.zhihu.com/p/632671704
+
+基于 GPT3.5 实现本地知识库解决方案-利用向量数据库和 GPT 向量接口-实现智能回复并限制 ChatGPT 回答的范围
+https://gofly.v1kf.com/article/40
+
+对应源码 https://gitee.com/taoshihan/document.ai
+
+LangChain 基于 ChatGPT 构建本地知识库问答应用
+https://xiaobichao.blog.csdn.net/article/details/131367024
+
+小白如何把 GPT 本地化，建立个人和小企业的知识库
+https://zhuanlan.zhihu.com/p/630463740
+
+db-gpt
+
+https://db-gpt.readthedocs.io/en/latest/
