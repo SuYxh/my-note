@@ -59,5 +59,4 @@ const obj2 = {
 };
 
 // isEqual函数，相等输出true，不相等输出false
-
 console.log(isEqual(obj1, obj2));
