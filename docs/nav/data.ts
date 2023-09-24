@@ -136,6 +136,13 @@ export const NAV_DATA: NavData[] = [
         link: "https://my-note-nu.vercel.app/",
       },
       {
+        icon: "https://qn.huat.xyz/mac/202309241031120.png",
+        title: "Nestjs 模板",
+        desc: "Nestjs + MySQL",
+        link: "https://gitee.com/ironc/nest-mysql-template",
+        repo: "https://gitee.com/ironc/nest-mysql-template",
+      },
+      {
         icon: "https://qn.huat.xyz/mac/202308131235206.png",
         title: "Eggjs 模板",
         desc: "Eggjs 模板",
@@ -186,6 +193,25 @@ export const NAV_DATA: NavData[] = [
         desc: "--",
         link: "-",
         repo: "-",
+      },
+    ],
+  },
+  {
+    title: "其他",
+    items: [
+      {
+        icon: "https://qn.huat.xyz/mac/202309241031120.png",
+        title: "nestjs-study",
+        desc: "nestjs 练习场地， 包含配置、数据库、日志、鉴权、rbac等",
+        link: "https://gitee.com/ironc/nestjs-study",
+        repo: "https://gitee.com/ironc/nestjs-study",
+      },
+      {
+        icon: "https://qn.huat.xyz/mac/202309241102210.png",
+        title: "nestjs-study-frontend",
+        desc: "nestjs 学习对应的前端项目， 基于 Vue 技术栈",
+        link: "https://gitee.com/ironc/nestjs-study-frontend",
+        repo: "https://gitee.com/ironc/nestjs-study-frontend",
       },
     ],
   },
