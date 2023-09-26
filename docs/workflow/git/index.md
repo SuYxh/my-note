@@ -342,3 +342,37 @@ alias glogp="git log --pretty='%C(yellow)%h%C(reset) %ad %C(green)%s%C(reset) %C
 - `%d`: `branch tag` 信息
 - `%an`: 作者名称
 - `%ae`: 作者的邮箱地址
+
+## 常见问题
+
+### 1、pull 分支报错 fatal: Need to specify how to reconcile divergent branches
+
+```
+➜  git:(test) git pull origin test
+ * branch              test       -> FETCH_HEAD
+hint: You have divergent branches and need to specify how to reconcile them.
+hint: You can do so by running one of the following commands sometime before
+hint: your next pull:
+hint:
+hint:   git config pull.rebase false  # merge (the default strategy)
+hint:   git config pull.rebase true   # rebase
+hint:   git config pull.ff only       # fast-forward only
+hint:
+hint: You can replace "git config" with "git config --global" to set a default
+hint: preference for all repositories. You can also pass --rebase, --no-rebase,
+hint: or --ff-only on the command line to override the configured default per
+hint: invocation.
+fatal: Need to specify how to reconcile divergent branches.
+```
+
+解决方法
+
+分析：这是由于你拉取 pull 分支前，进行过 merge 合并更新分支操作，而其他人在你之前已经 push 过一个版本，导致版本不一致
+
+第一种解决方法：比较简单
+
+执行 git config pull.rebase false
+默认将 pull 下来的代码与现有改动的代码进行合并
+但是可能会造成代码冲突，需要处理下这个问题，代码冲突如果 2 个人都改了同一个文件，需要联系之前 push 的同学，看看这块代码怎么保存
+
+参考：https://blog.csdn.net/qq_45677671/article/details/122574671
