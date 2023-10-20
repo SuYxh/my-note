@@ -27,3 +27,11 @@ https://juejin.cn/post/7134610733962100750
 【eslint、git 配置比较详细】手把手教你搭建 vue3+vite+vant 移动端项目
 
 https://juejin.cn/post/7012946831877341191
+
+# 通用模板的考量
+
+- h5
+- 后台管理
+- uniapp
+
+具备的功能，每个功能的封装【最佳实践】
