@@ -76,7 +76,7 @@ export const routes = [
 ];
 ```
 
-接下来就是显示路由区域，利用<outlet>组件
+接下来就是显示路由区域，利用`<outlet>`组件
 
 ```jsx
 import React from "react";
@@ -93,7 +93,7 @@ function App() {
 export default App;
 ```
 
-可以看到 <Link>组件用于声明式路由切换使用。同样<outlet>组件也可以给嵌套路由页面进行使用，从而完成二级路由的切换操作。
+可以看到 `<Link>`组件用于声明式路由切换使用。同样`<outlet>`组件也可以给嵌套路由页面进行使用，从而完成二级路由的切换操作。
 
 ```jsx
 import React from "react";

@@ -19,7 +19,7 @@ loader 函数进行路由前触发，配合 redirect 做权限拦截。还可以
 }
 ```
 
-在<Bar>这个组件内就可以通过`useLoaderData`函数来获取到 ret 的值。
+在`<Bar>`这个组件内就可以通过`useLoaderData`函数来获取到 ret 的值。
 
 ```jsx
 import { useLoaderData } from "react-router-dom";
@@ -32,7 +32,7 @@ export default function Bar() {
 
 ## redirect 方法
 
-在`loader`函数中是没有办法使用<Navigate>组件进行重定向操作的，所以在 React 路由中提供了，另一种重定向的操作，即`redirect`函数。
+在`loader`函数中是没有办法使用`<Navigate>`组件进行重定向操作的，所以在 React 路由中提供了，另一种重定向的操作，即`redirect`函数。
 
 ```javascript
 {

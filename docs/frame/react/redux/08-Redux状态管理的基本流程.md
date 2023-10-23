@@ -35,7 +35,7 @@ const store = createStore(counterReducer);
 export default store;
 ```
 
-这样 store 对象就可以在其他组件中进行使用了，例如在<Foo>组件中。
+这样 store 对象就可以在其他组件中进行使用了，例如在`<Foo>`组件中。
 
 ```jsx
 import React from "react";

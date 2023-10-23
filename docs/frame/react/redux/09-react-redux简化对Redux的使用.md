@@ -6,11 +6,11 @@
 
 主要提供的 API 有：
 
-- <Provider store={store}>
+- `<Provider store={store}>`
 - useSelector
 - useDispatch
 
-<Provider>组件主要是注册状态管理与 React 结合，并且可以自动完成重渲染的操作。
+`<Provider>`组件主要是注册状态管理与 React 结合，并且可以自动完成重渲染的操作。
 
 useSelector，useDispatch 都是 react-redux 库提供的 use 函数，可以获取共享状态以及修改共享状态。
 
