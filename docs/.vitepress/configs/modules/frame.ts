@@ -3,6 +3,7 @@ const data = {
   items: [
     { text: "vue", link: "/frame/vue/index" },
     { text: "react", link: "/frame/react/index" },
+    { text: "区别", link: "/frame/different/index" },
   ],
   activeMatch: "^/frame",
 };

@@ -219,6 +219,91 @@ const sidebar = {
         },
       ],
     },
+
+    {
+      text: "Typescript",
+      collapsed: true,
+      items: [
+        {
+          text: "props类型",
+          link: "/frame/react/ts/08-React与TS配合之基础props限制.md",
+        },
+        {
+          text: "children与event类型",
+          link: "/frame/react/ts/09-React与TS配合之children与event限制.md",
+        },
+        {
+          text: "style与component类型",
+          link: "/frame/react/ts/10-React与TS配合之style与component限制.md",
+        },
+        {
+          text: "use函数类型",
+          link: "/frame/react/ts/11-React与TS配合之use函数限制.md",
+        },
+        {
+          text: "类组件类型",
+          link: "/frame/react/ts/12-React与TS配合之类组件类型限制.md",
+        },
+        {
+          text: "Router路由类型",
+          link: "/frame/react/ts/13-React Router路由如何使用TS进行开发.md",
+        },
+        {
+          text: "Redux Toolkit状态管理类型",
+          link: "/frame/react/ts/14-Redux Toolkit状态管理如何使用TS进行开发.md",
+        },
+      ],
+    },
+
+    {
+      text: "Umi",
+      collapsed: true,
+      items: [
+        {
+          text: "Umi4框架介绍与基本使用",
+          link: "/frame/react/umi/15-Umi4框架介绍与基本使用.md",
+        },
+
+        {
+          text: "Umi4之mock数据_路由数据加载_路由包装组件",
+          link: "/frame/react/umi/16-Umi4之mock数据_路由数据加载_路由包装组件.md",
+        },
+
+        {
+          text: "Umi Max之antd组件库_发起请求_共享数据流",
+          link: "/frame/react/umi/17-Umi Max之antd组件库_发起请求_共享数据流.md",
+        },
+      ],
+    },
+  ],
+
+  "/frame/different/": [
+    {
+      text: "区别",
+      collapsed: false,
+      items: [
+        {
+          text: "编程风格与视图风格",
+          link: "/frame/different/02-React18与Vue3对比之编程风格与视图风格.md",
+        },
+        {
+          text: "组件_路由_状态管理等风格",
+          link: "/frame/different/03-React18与Vue3对比之组件_路由_状态管理等风格.md",
+        },
+        {
+          text: "模板_样式_事件_表单等功能",
+          link: "/frame/different/04-React18与Vue3对比之模板_样式_事件_表单等功能.md",
+        },
+        {
+          text: "diff算法的相同策略与不同策略",
+          link: "/frame/different/06-React18与Vue3对比之diff算法的相同策略与不同策略.md",
+        },
+        {
+          text: "响应式_生命周期_副作用等功能",
+          link: "/frame/different/07-React18与Vue3对比之响应式_生命周期_副作用等功能.md",
+        },
+      ],
+    },
   ],
 };
 
