@@ -7,6 +7,7 @@ import chatgpt from "./modules/chatgpt";
 import pit from "./modules/pit";
 import me from "./modules/me";
 import computerBase from "./modules/computerBase";
+import sql from "./modules/sql";
 
 export const nav: DefaultTheme.Config["nav"] = [
   { text: "我的项目", link: "/nav", activeMatch: "^/nav" },
@@ -17,6 +18,8 @@ export const nav: DefaultTheme.Config["nav"] = [
   // { text: '源码阅读', link: '/analysis/utils/only-allow', activeMatch: '^/analysis' },
   // 构建部署
   build,
+  // 数据库
+  sql,
   // 工具
   tools,
   // 计算机基础
