@@ -28,8 +28,28 @@ const sidebar = {
       collapsed: true,
       items: [
         {
-          text: "核心概念及选项式API",
-          link: "/frame/vue/base/02-Vue3核心概念及选项式API.md",
+          text: "路由的基本搭建与嵌套路由模式",
+          link: "/frame/vue/路由/03-路由的基本搭建与嵌套路由模式.md",
+        },
+        {
+          text: "动态路由模式与编程式路由模式",
+          link: "/frame/vue/路由/04-动态路由模式与编程式路由模式.md",
+        },
+        {
+          text: "命名路由与命名视图与路由元信息",
+          link: "/frame/vue/路由/05-命名路由与命名视图与路由元信息.md",
+        },
+        {
+          text: "路由传递参数的多种方式及应用场景",
+          link: "/frame/vue/路由/06-路由传递参数的多种方式及应用场景.md",
+        },
+        {
+          text: "详解route对象与router对象",
+          link: "/frame/vue/路由/07-详解route对象与router对象.md",
+        },
+        {
+          text: "路由守卫详解及应用场景",
+          link: "/frame/vue/路由/08-路由守卫详解及应用场景.md",
         },
       ],
     },
@@ -39,8 +59,24 @@ const sidebar = {
       collapsed: true,
       items: [
         {
-          text: "核心概念及选项式API",
-          link: "/frame/vue/base/02-Vue3核心概念及选项式API.md",
+          text: "Vuex共享状态的基本开发流程",
+          link: "/frame/vue/vuex/10-Vuex共享状态的基本开发流程.md",
+        },
+        {
+          text: "Vuex处理异步状态及应用场景",
+          link: "/frame/vue/vuex/11-Vuex处理异步状态及应用场景.md",
+        },
+        {
+          text: "Vuex计算属性和辅助函数的使用",
+          link: "/frame/vue/vuex/12-Vuex计算属性和辅助函数的使用.md",
+        },
+        {
+          text: "Vuex-persist对数据进行持久化处理",
+          link: "/frame/vue/vuex/13-Vuex-persist对数据进行持久化处理.md",
+        },
+        {
+          text: "Vuex分割模块及多状态管理",
+          link: "/frame/vue/vuex/14-Vuex分割模块及多状态管理.md",
         },
       ],
     },
