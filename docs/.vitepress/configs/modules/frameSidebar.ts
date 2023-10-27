@@ -1,8 +1,64 @@
 const sidebar = {
   "/frame/vue/": [
     {
-      text: "vue",
+      text: "基础",
       collapsed: false,
+      items: [
+        {
+          text: "核心概念及选项式API",
+          link: "/frame/vue/base/02-Vue3核心概念及选项式API.md",
+        },
+        {
+          text: "组件应用及单文件组件",
+          link: "/frame/vue/base/03-Vue3组件应用及单文件组件.md",
+        },
+        {
+          text: "语法系统进阶",
+          link: "/frame/vue/base/04-Vue3语法系统进阶.md",
+        },
+        {
+          text: "Vue3组合式API详解",
+          link: "/frame/vue/base/05-Vue3组合式API详解.md",
+        },
+      ],
+    },
+
+    {
+      text: "路由",
+      collapsed: true,
+      items: [
+        {
+          text: "核心概念及选项式API",
+          link: "/frame/vue/base/02-Vue3核心概念及选项式API.md",
+        },
+      ],
+    },
+
+    {
+      text: "vuex",
+      collapsed: true,
+      items: [
+        {
+          text: "核心概念及选项式API",
+          link: "/frame/vue/base/02-Vue3核心概念及选项式API.md",
+        },
+      ],
+    },
+
+    {
+      text: "pinia",
+      collapsed: true,
+      items: [
+        {
+          text: "核心概念及选项式API",
+          link: "/frame/vue/base/02-Vue3核心概念及选项式API.md",
+        },
+      ],
+    },
+
+    {
+      text: "其他",
+      collapsed: true,
       items: [
         { text: "vue 基础", link: "/frame/vue/index" },
         { text: "vue 小技巧", link: "/frame/vue/skill" },

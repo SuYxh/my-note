@@ -220,6 +220,12 @@ zhuanstatic.com
 
 [详细过滤规则](http://wproxy.org/whistle/webui/settings.html)
 
+```
+api.juejin.cn style://color=@fff&fontStyle=italic&bgColor=red
+```
+
+![image.png](https://qn.huat.xyz/mac/202310261542904.awebp)
+
 #### 配置导入
 
 1、下载规则及其他配置文件
