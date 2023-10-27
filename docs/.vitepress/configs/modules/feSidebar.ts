@@ -237,6 +237,23 @@ const sidebar = {
           text: "类中如何使用类型",
           link: "/fe/typescript/advance/09-类中如何使用类型.md",
         },
+
+        {
+          text: "d.ts声明文件和declare关键字",
+          link: "/fe/typescript/advance/d点ts声明文件和declare关键字.md",
+        },
+        {
+          text: "@types和DefinitelyTyped仓库",
+          link: "/fe/typescript/advance/@types和DefinitelyTyped仓库.md",
+        },
+        {
+          text: "lib.d.ts和global.d.ts",
+          link: "/fe/typescript/advance/lib_d_ts和global_d_ts.md",
+        },
+        {
+          text: "详解tsconfigjson配置文件",
+          link: "/fe/typescript/advance/详解tsconfigjson配置文件.md",
+        },
       ],
     },
     {
