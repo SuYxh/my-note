@@ -9,6 +9,10 @@ const data = {
       text: "微信相关",
       link: "/weixin/index",
     },
+    {
+      text: "鸿蒙开发",
+      link: "/harmonyOS/index",
+    },
   ],
   activeMatch: "^/power",
 };

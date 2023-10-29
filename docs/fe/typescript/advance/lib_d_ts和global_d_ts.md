@@ -13,10 +13,7 @@ let date: Date = new Date();
 
 这里的`HTMLBodyElement`和`Date`都是 TypeScript 下自带的一些内置类型，这些类型都存放在 lib 这个文件夹下。
 
-<div align=center>
-    <img src="./img/09-01-lib.d.ts.png" />
-    <div>lib.d.ts</div>
-</div>
+![09-01-lib.d.ts](https://qn.huat.xyz/mac/202310292154614.png)
 
 ## global.d.ts
 
