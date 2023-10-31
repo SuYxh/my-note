@@ -68,7 +68,7 @@ export default defineConfig({
       });
   },
   buildEnd: async ({ outDir }) => {
-    const sitemap = new SitemapStream({ hostname: "https://note.ironc.cn/" });
+    const sitemap = new SitemapStream({ hostname: "https://blog.vuejs.news/" });
     const writeStream = createWriteStream(resolve(outDir, "sitemap.xml"));
     sitemap.pipe(writeStream);
     links.forEach((link) => sitemap.write(link));

@@ -93,6 +93,12 @@ const sidebar = {
     },
 
     {
+      text: "源码",
+      collapsed: true,
+      items: [{ text: "源码", link: "/frame/vue/源码/index" }],
+    },
+
+    {
       text: "其他",
       collapsed: true,
       items: [

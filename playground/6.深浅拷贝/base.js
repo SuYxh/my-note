@@ -1,12 +1,13 @@
 import data from "./data.js";
 
+// reg、Symbol、Date
 function deepClone(obj, cache = new Set()) {
   if (typeof obj !== "object" || obj == null) {
     return obj;
   }
 
   if (cache.has(obj)) {
-    return;
+    return obj;
   }
 
   cache.add(obj);
@@ -23,12 +24,9 @@ function deepClone(obj, cache = new Set()) {
 }
 
 function test() {
-  const newObj = deepClone(data);
+  const newObj = dp(data);
   console.log("obj", data);
   console.log("newObj", newObj);
-
-  // data.say()
-  // newObj.say()
 }
 
 export default {

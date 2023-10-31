@@ -11,20 +11,21 @@ hero:
     alt: MY-NOTE
   actions:
     - text: Go -->
-      link: /fe/es6/
-    - text: Project
+      link: /fe/javascript/types
+    - text: 我的项目
       link: /nav
       theme: alt
 features:
   - icon: 📖
     title: 前端基础
-    details: 整理前端常用知识点<small>（面试八股文）</small><br />如有异议按你的理解为主，不接受反驳
+    details: 整理前端常用知识点<small>（你懂的）</small><br />如有异议按你的理解为主，不接受反驳
     link: /fe/javascript/types
     linkText: 前端常用知识
   - icon: 📘
     title: 源码阅读
     details: 了解各种库的实现原理<br />学习其中的小技巧和冷知识
-    link: /analysis/utils/only-allow
+    link: /frame/vue/源码/index.md
+    # link: /analysis/utils/only-allow
     linkText: 源码阅读
   - icon: 💡
     title: Workflow
@@ -42,8 +43,8 @@ features:
     link: /pit/npm
     linkText: 踩坑记录
   - icon: 💯
-    title: 吾志所向，一往无前。
-    details: '<small class="bottom-small">一个想躺平的小开发</small>'
+    title: 吾志所向，一往无前
+    details: '<small class="bottom-small">心有猛虎 细嗅蔷薇</small>'
     link: https://www.yuque.com/jarvis-zzzhw/frontend
 ---
 

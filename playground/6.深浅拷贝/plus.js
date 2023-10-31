@@ -6,6 +6,7 @@ function deepClone(obj, cache = new Set()) {
 
   const Ctor = obj.constructor;
   const type = Object.prototype.toString.call(obj).slice(8, -1).toLowerCase();
+  // console.log(type);
 
   if (/^(Symbol|bigint)$/i.test(type)) return Object(obj);
   if (/^(regexp|date)$/i.test(type)) return new Ctor(obj);

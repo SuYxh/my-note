@@ -5,6 +5,7 @@ const sidebar = {
       collapsed: false,
       items: [
         { text: "官网", link: "https://platform.openai.com/" },
+        { text: "我的GPT", link: "https://ask.vuejs.news/#/" },
         { text: "文档", link: "/chatGPT/openai/index" },
         { text: "Models", link: "/chatGPT/openai/Models" },
         { text: "GPT", link: "/chatGPT/openai/GPT" },
