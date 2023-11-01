@@ -1,6 +1,6 @@
 /** 基本类型 */
 true instanceof Boolean       // false
-'maomao' instanceof String    // false
+'dahuang' instanceof String    // false
 1 instanceof Number           // false
 
 /** 引用类型 */
@@ -8,7 +8,7 @@ function Person(name) {
   this.name = name
 }
 
-const p1 = new Person('maomao')
+const p1 = new Person('dahuang')
 
 p1 instanceof Person          // true
 p1 instanceof Object          // true

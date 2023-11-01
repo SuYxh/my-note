@@ -29,7 +29,7 @@ let isFlag: boolean = true;
 #### string 字符串类型
 
 ```ts
-let name: string = "maomao";
+let name: string = "dahuang";
 name = "茂茂";
 ```
 
@@ -57,7 +57,7 @@ let big: bigint = 19961996n;
 `symbol` 类型表示独一无二的值，其必须通过 `Symbol` 函数生成，常用于创建对象属性的唯一标识符
 
 ```ts
-let sym: symbol = Symbol("maomao");
+let sym: symbol = Symbol("dahuang");
 sym = Symbol("茂茂"); // OK
 sym = "茂茂"; // Error
 ```
@@ -96,7 +96,7 @@ create(undefined); // Error
 ```ts
 /* 你可以任意操作你的变量 TypeScript 不会抛出相关的提示 */
 let value: any = 1;
-free = { name: "maomao" };
+free = { name: "dahuang" };
 free.log();
 free = "茂茂";
 ```
@@ -174,7 +174,7 @@ function error(message: string): never {
 - **类型推断**：由 `TypeScript` 根据上下文内容自动推断出变量类型
 
 ```ts
-let name: string = "maomao";
+let name: string = "dahuang";
 let age = 18; // TypeScript 自动推断为 job: number
 ```
 
@@ -197,7 +197,7 @@ const strArray: string[] = ["1", "2", "3"];
 // 只允许存储 number 类型
 const numArray: number[] = [1, 2, 3];
 // 任意类型
-const anyArray: any[] = ["maomao", 18, {}];
+const anyArray: any[] = ["dahuang", 18, {}];
 ```
 
 通过**泛型**定义数组类型：
@@ -208,7 +208,7 @@ const strArray: Array<string> = ["1", "2", "3"];
 // 只允许存储 number 类型
 const numArray: Array<number> = [1, 2, 3];
 // 任意类型
-const anyArray: Array<any> = ["maomao", 18, {}];
+const anyArray: Array<any> = ["dahuang", 18, {}];
 ```
 
 ### 元组 Tuple
@@ -218,7 +218,7 @@ const anyArray: Array<any> = ["maomao", 18, {}];
 当对元组类型的数据进行 **越界访问** 或 **分配错误的类型值** 时，`TypeScript` 将报错提示
 
 ```ts
-const tuple: [string, number] = ["maomao", 18];
+const tuple: [string, number] = ["dahuang", 18];
 
 console.log(tuple[2]); // Error
 tuple[0] = 666; // Error
@@ -298,7 +298,7 @@ interface Person {
 }
 
 const person: Person = {
-  name: "maomao",
+  name: "dahuang",
   age: 18,
 };
 ```
@@ -313,7 +313,7 @@ interface Person {
 
 // Error: 缺少属性 "age"
 const person1: Person = {
-  name: 'maomao'
+  name: 'dahuang'
 }
 // Error: "gender" 不在类型 "Person" 中
 const person2: Person = {
@@ -334,7 +334,7 @@ interface Person {
 }
 
 const person: Person = {
-  name: "maomao",
+  name: "dahuang",
 };
 ```
 
@@ -366,7 +366,7 @@ interface Person {
 }
 
 const person: Person = {
-  name: "maomao",
+  name: "dahuang",
   gender: "male",
 };
 ```
@@ -470,7 +470,7 @@ type Person = {
 **字符串字面量类型**：
 
 ```ts
-type Name = "maomao" | "maomao1996" | "茂茂";
+type Name = "dahuang" | "dahuang1996" | "茂茂";
 ```
 
 **数字字面量类型**：

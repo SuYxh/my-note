@@ -11,7 +11,7 @@
 - [Git 配置多个 SSH-Key](https://gitee.com/help/articles/4229)
 - 下载相关
   - [Windows 版下载镜像](https://npmmirror.com/mirrors/git-for-windows/)
-  - [使用 jsdelivr 加速 Github 仓库资源](https://github.com/maomao1996/daily-notes/issues/7)
+  - [使用 jsdelivr 加速 Github 仓库资源](https://github.com/dahuang1996/daily-notes/issues/7)
 
 ## commit 常用 type
 

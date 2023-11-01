@@ -359,7 +359,7 @@ jsonp("https://www.baidu.com/sugrec", {
 document.cookie;
 
 /* 写入 */
-document.cookie = "name=maomao";
+document.cookie = "name=dahuang";
 ```
 
 ::: tip Cookie 的缺点
@@ -402,7 +402,7 @@ document.cookie = "name=maomao";
 
 ```js
 /* 存储数据 setItem() */
-localStorage.setItem("name", "maomao");
+localStorage.setItem("name", "dahuang");
 
 /* 读取数据 getItem() */
 localStorage.getItem("name");
@@ -529,7 +529,7 @@ const objectStore = transaction.objectStore("userInfo");
 const objectStoreRequest = objectStore.get(1);
 objectStoreRequest.onsuccess = function () {
   const data = objectStoreRequest.result;
-  data.name = "maomao";
+  data.name = "dahuang";
   objectStore.put(data);
 };
 ```
