@@ -13,6 +13,18 @@ function curry(func) {
   };
 }
 
+function curry(func) {
+  const length = func.length;
+  const params = [];
+  return function (...args) {
+    if (params.length >= length) {
+      func.apply(this, params);
+    } else {
+      params = [...params, ...args];
+    }
+  };
+}
+
 function sum(a, b, c) {
   return a + b + c;
 }

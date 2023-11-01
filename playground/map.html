@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // const m = new Map();
+    // console.log(m);
+    // const o = { p: 'Hello World' };
+
+    // m.set(o, 'content')
+    // m.set('12', '12')
+    // m.set('13', '13')
+    // m.set('14', '14')
+    // console.log(m);
+
+    // console.log(m.get(o)); // "content"
+
+    // m.has(o) // true
+    // m.delete(o) // true
+    // m.has(o) // false
+
+    // const map = new Map([
+    //   ['name', 'wangwu', '张三', "lisi"],
+    //   ['title', 'Author']
+    // ]);
+    // console.log(map);
+
+    // map.size // 2
+    // map.has('name') // true
+    // console.log(map.get('name'));
+    //  // "张三"
+    // map.has('title') // true
+    // map.get('title') // "Author"
+
+    // const map = new Map([
+    //   ['F', 'no'],
+    //   ['T', 'yes'],
+    // ]);
+
+    // console.log(map);
+    // console.log([...map]);
+
+    // const bianli = map.keys()
+    // console.log(bianli);
+    // console.log(bianli.next());
+
+    // for (let key of map.keys()) {
+    //   console.log(key);
+    // }
+
+
+    const map0 = new Map()
+      .set(1, 'a')
+      .set(2, 'b')
+      .set(3, 'c');
+
+    console.log(map0);
+
+    map0.forEach( (value, key, map) => {
+      console.log("Key: %s, Value: %s", key, value, map);
+    });
+
+    // const mp1 = new Map([...map0].filter(([key, val]) => key < 3))
+
+    // console.log(mp1);  
+
+
+  </script>
+</body>
+
+</html>

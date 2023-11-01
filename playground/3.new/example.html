@@ -9,28 +9,20 @@
 
   <body>
     <script>
-      // javascript中的new做了什么事？并且手写实现
-      function _new() {
-        console.log('_new--arguments', arguments)
 
-        let newObject = null,
-          constructor = Array.prototype.shift.call(arguments)
-        result = null
-        console.log('constructor', constructor)
-        // 参数判断
-        if (typeof constructor !== 'function') {
+      function _new() {
+        const Ctor = [].shift.call(arguments)
+         // 参数判断
+         if (typeof constructor !== 'function') {
           console.error('type error')
           return
         }
         // 新建一个空对象，对象的原型为构造函数的 prototype 对象
-        newObject = Object.create(constructor.prototype)
+        const obj = Object.create(Ctor.prototype)
         // 将 this 指向新建对象，并执行函数
-        result = constructor.apply(newObject, arguments)
-        // 判断返回对象
-        let flag =
-          result && (typeof result === 'object' || typeof result === 'function')
-        // 判断返回结果
-        return flag ? result : newObject
+        const result = Ctor.apply(obj, arguments)
+        // 判断返回
+        return (typeof result === "object" || typeof result === "function") ? result : obj
       }
 
       function Animal(name) {
@@ -42,44 +34,6 @@
 
       console.log(dog1 instanceof Animal, 'dog1', dog1)
       console.log(dog2 instanceof Animal, 'dog2', dog2)
-
-      function f1() {
-        console.log('this is f1')
-      }
-
-      function test() {
-        console.log('test', arguments)
-      }
-
-      test(Animal, f1, 'a', 12)
-
-      function myNew(constructor, ...args) {
-        // 创建一个空对象
-        const obj = {}
-
-        // 将该对象的构造函数属性指向要创建实例的构造函数
-        Object.setPrototypeOf(obj, constructor.prototype)
-
-        // 将该对象作为this关键字传递给构造函数，并执行该构造函数，以初始化对象的属性和方法
-        const result = constructor.apply(obj, args)
-
-        // 如果构造函数返回一个对象，则返回该对象；否则，返回上面创建的对象
-        return result && typeof result === 'object' ? result : obj
-      }
-
-
-      function xxxnew(constructor, ...arg) {
-        
-        let obj = {}
-        
-
-        obj = Object.create(constructor.prototype)
-
-        const result = constructor.apply(obj, arg)
-
-        return typeof result === "object" ? result : obj
-
-      }
     </script>
   </body>
 </html>

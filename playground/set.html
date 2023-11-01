@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    const s = new Set([2, 3, 5, 4, 5, 2, 2, { name: 'dahuang' }]);
+
+    console.log(s);
+
+    console.log(Array.from(s));
+
+    for (let i of s) {
+      console.log(i);
+    }
+
+    console.log([...new Set('ababbc')].join(''));
+  </script>
+</body>
+
+</html>
