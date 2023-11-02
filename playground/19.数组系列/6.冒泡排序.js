@@ -13,5 +13,5 @@ function bubble(ary) {
 }
 let ary = [12, 8, 24, 16, 1];
 
-ary = bubble(ary);
-console.log(ary);
+// ary = bubble(ary);
+// console.log(ary);

@@ -17,59 +17,6 @@ const data = [
   },
 ];
 
-function dfs2(root) {
-  if (!root.length) {
-    return;
-  }
-
-  const stack = [];
-
-  if (Array.isArray(root)) {
-    for (let i = root.length; i >= 0; i--) {
-      console.log(root[i]);
-      stack.push(root[i]);
-    }
-    // root.forEach(v => stack.push(v))
-  }
-
-  while (stack.length) {
-    const item = stack.pop();
-    if (item) {
-      console.log(item.name);
-
-      if (item.children?.length) {
-        item.children.forEach((child) => {
-          stack.push(child);
-        });
-      }
-    }
-  }
-}
-
-// console.log(dfs2(data))
-
-function dfs3(data) {
-  const result = [];
-
-  data.forEach((item) => {
-    const step = (v) => {
-      console.log(v.name);
-      result.push(v.name);
-      if (v.children?.length) {
-        v.children.forEach((m) => {
-          step(m);
-        });
-      }
-    };
-
-    step(item);
-  });
-
-  return result;
-}
-
-console.log(dfs3(data));
-
 // 深度遍历, 使用递归
 function dfs(data) {
   const result = [];
@@ -100,7 +47,6 @@ function bfs(data) {
 }
 
 // console.log(dfs(data));
-
 function test(tree, curDelLevel = 0) {
   let i = 0;
   if (tree.children) {

@@ -1,27 +1,25 @@
-function search(arr, target, start, end) {
-  let targetIndex = -1;
+function binarySearch(array, target) {
+  let low = 0;
+  let high = array.length - 1;
 
-  let mid = Math.floor((start + end) / 2);
+  while (low <= high) {
+    let mid = Math.floor((low + high) / 2);
+    let guess = array[mid];
 
-  if (arr[mid] === target) {
-    targetIndex = mid;
-    return targetIndex;
+    if (guess === target) {
+      return mid; // 返回目标值的索引
+    }
+    if (guess > target) {
+      high = mid - 1;
+    } else {
+      low = mid + 1;
+    }
   }
 
-  if (start >= end) {
-    return targetIndex;
-  }
-
-  if (arr[mid] < target) {
-    return search(arr, target, mid + 1, end);
-  } else {
-    return search(arr, target, start, mid - 1);
-  }
+  return -1; // 当目标值不存在时，返回-1
 }
-// const dataArr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-// const position = search(dataArr, 6, 0, dataArr.length - 1);
-// if (position !== -1) {
-//   console.log(`目标元素在数组中的位置:${position}`);
-// } else {
-//   console.log("目标元素不在数组中");
-// }
+
+// 测试二分查找
+let sortedArray = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+console.log(binarySearch(sortedArray, 5)); // 输出：4
+console.log(binarySearch(sortedArray, 10)); // 输出：-1

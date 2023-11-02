@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    const tree = {
+      val: "a",
+      children: [
+        {
+          val: "b",
+          children: [
+            {
+              val: "d",
+              children: [],
+            },
+            {
+              val: "e",
+              children: [],
+            },
+          ],
+        },
+        {
+          val: "c",
+          children: [
+            {
+              val: "f",
+              children: [],
+            },
+            {
+              val: "g",
+              children: [],
+            },
+          ],
+        },
+      ],
+    };
+
+    // dfs 递归调用
+    function dfs3(root) {
+      console.log(root.val);
+      if (root.children?.length) {
+        root.children.forEach(dfs3);
+      }
+    }
+
+    // dfs 栈调用
+    function dfs6(root) {
+      const result = [];
+
+      function _dfs(root) {
+        const stack = [];
+        stack.push(root);
+
+        while (stack.length) {
+          const topEl = stack.pop();
+          result.push(topEl.val);
+          if (topEl.children?.length) {
+            topEl.children.reverse().forEach((child) => stack.push(child));
+          }
+        }
+      }
+
+      _dfs(root);
+
+      return result;
+    }
+
+    // dfs3(tree)
+    console.log(dfs6(tree));
+
+
+    // 广度优先
+    function bfs(root) {
+      const queue = [];
+      queue.push(root);
+
+      while (queue.length) {
+        const el = queue.shift();
+        console.log(el.val);
+        if (el.children?.length) {
+          el.children.reverse().forEach((child) => queue.push(child));
+        }
+      }
+    }
+
+    bfs(tree)
+
+  </script>
+</body>
+
+</html>

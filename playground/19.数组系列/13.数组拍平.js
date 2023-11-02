@@ -15,7 +15,29 @@ function flat(arr) {
   return result;
 }
 
+function flat2(arr) {
+  const result = [];
+
+  function loop(arr) {
+    if (arr.length < 1) {
+      return;
+    }
+    arr.forEach((item) => {
+      if (Array.isArray(item)) {
+        loop(item);
+      } else {
+        result.push(item);
+      }
+    });
+  }
+
+  loop(arr);
+
+  return result;
+}
+
 const arr1 = flat(arr);
 console.log(arr.flat(Infinity));
 // console.log(arr);
 console.log(arr1);
+console.log(flat2(arr));

@@ -26,9 +26,6 @@ let testNode = {
   ],
 };
 
-getNodesLevel(testNode);
-console.log(testNode);
-
 function getNodesLevel(node) {
   let level = 0;
   let queue = [];
@@ -46,3 +43,6 @@ function getNodesLevel(node) {
     }
   }
 }
+
+getNodesLevel(testNode);
+console.log(JSON.stringify(testNode));

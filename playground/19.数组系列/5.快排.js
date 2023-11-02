@@ -16,25 +16,9 @@ function quick(ary) {
   // 3.递归方式让左右两边的数组持续这样处理，一直到左右两边都排好序为止（最后让左边+中间+右边拼接成为最后的结果）
   return quick(aryLeft).concat(middleValue, quick(aryRight));
 }
+
 let ary = [12, 8, 15, 16, 1, 24];
-ary = quick(ary);
-console.log(ary);
+// ary = quick(ary);
+// console.log(ary);
 
-function quick2(array) {
-  if (array.length <= 1) {
-    return array;
-  }
-  const middleIndex = Math.floor(array.length / 2);
-  const middleValue = array.splice(middleIndex, 1)[0];
-  const arrayLeft = [],
-    arrayRight = [];
-  for (let index = 0; index < array.length; index++) {
-    const item = array[index];
-    item > middleValue ? arrayRight.push(item) : arrayLeft.push(item);
-  }
-  return quick2(arrayLeft).concat(middleValue, quick2(arrayRight));
-}
-
-let ary2 = [12, 8, 15, 16, 1, 24];
-ary2 = quick(ary2);
-console.log(ary2);
+console.log(ary.splice(2, 1));
