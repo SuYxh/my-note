@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script type="module" >
+    // import './singlyLinkedList.js';
+    // import './237删除链表中的节点.js';
+    import './206反转链表.js';
+
+  </script>
+  <script>
+    const a = { val: "a" };
+    const b = { val: "b" };
+    const c = { val: "c" };
+    const d = { val: "d" };
+    a.next = b;
+    b.next = c;
+    c.next = d;
+
+    // 在 c 和 d 之间插入 e
+    const e = { val: "e" };
+    c.next = e;
+    e.next = d;
+
+    // 删除 e
+    c.next = d;
+
+    // 遍历链表
+    // let p = a;
+    // console.log(p);
+
+    // while (p) {
+    //   console.log(p.val);
+    //   p = p.next;
+    // }
+
+  </script>
+</body>
+
+</html>
