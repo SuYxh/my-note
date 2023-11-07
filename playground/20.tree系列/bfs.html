@@ -41,40 +41,6 @@
       ],
     };
 
-    // dfs 递归调用
-    function dfs3(root) {
-      console.log(root.val);
-      if (root.children?.length) {
-        root.children.forEach(dfs3);
-      }
-    }
-
-    // dfs 栈调用
-    function dfs6(root) {
-      const result = [];
-
-      function _dfs(root) {
-        const stack = [];
-        stack.push(root);
-
-        while (stack.length) {
-          const topEl = stack.pop();
-          result.push(topEl.val);
-          if (topEl.children?.length) {
-            topEl.children.reverse().forEach((child) => stack.push(child));
-          }
-        }
-      }
-
-      _dfs(root);
-
-      return result;
-    }
-
-    // dfs3(tree)
-    console.log(dfs6(tree));
-
-
     // 广度优先
     function bfs(root) {
       const queue = [];
@@ -90,7 +56,6 @@
     }
 
     bfs(tree)
-
   </script>
 </body>
 

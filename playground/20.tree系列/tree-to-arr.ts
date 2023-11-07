@@ -44,36 +44,6 @@ function treeConvertToArray(root: ITreeNode): IArrayItem[] {
   return arr;
 }
 
-function treeConvertToArray2(root: ITreeNode): IArrayItem[] {
-  const arr: IArrayItem[] = [];
-  const map = new Map<ITreeNode, ITreeNode>();
-
-  const queue: ITreeNode[] = [];
-  queue.unshift(root);
-
-  while (queue.length > 0) {
-    const curNode = queue.pop();
-    if (!curNode) {
-      break;
-    }
-
-    const { id, name } = curNode;
-    const parentNode = map.get(curNode);
-    const parentId = parentNode?.id || 0;
-
-    arr.push({ id, name, parentId });
-
-    if (curNode.children) {
-      curNode.children.forEach((child) => {
-        map.set(child, curNode);
-        queue.unshift(child);
-      });
-    }
-  }
-
-  return arr;
-}
-
 export function funcTest() {
   const obj = {
     id: 1,
@@ -95,7 +65,5 @@ export function funcTest() {
     ],
   };
   const arr1 = treeConvertToArray(obj);
-  const arr2 = treeConvertToArray2(obj);
   console.info(arr1);
-  console.info(arr2);
 }

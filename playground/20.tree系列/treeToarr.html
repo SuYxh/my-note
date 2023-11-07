@@ -53,6 +53,24 @@
 
     const res = convert(tree)
     console.log(res);
+
+    function ttt(root) {
+      const result = []
+      const dfs = (root, pNode) => {
+        console.log(`${root.id} --> ${root.name}`);
+        result.push({ id: root.id, name: root.name, parentId: pNode?.id ?? 0 })
+        if(root.children?.length) {
+          root.children.forEach(item => {
+            dfs(item, root)
+          });
+        }
+      }
+
+      dfs(root, null)
+
+      return result
+    }
+    console.log(ttt(tree));
   
   </script>
 </body>

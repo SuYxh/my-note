@@ -42,38 +42,6 @@ function convert(arr: IArrayItem[]): ITreeNode | null {
   return root;
 }
 
-function convert2(arr: IArrayItem[]): ITreeNode | null {
-  let tree = null;
-
-  const map = new Map<number, ITreeNode>();
-
-  arr.forEach((item) => {
-    const { id, name, parentId } = item;
-
-    const treeNode: ITreeNode = {
-      id,
-      name,
-    };
-
-    map.set(id, treeNode);
-
-    const parentNode = map.get(parentId);
-
-    if (parentNode) {
-      if (!parentNode.children) {
-        parentNode.children = [];
-      }
-      parentNode.children.push(treeNode);
-    }
-
-    if (parentId == 0) {
-      tree = treeNode;
-    }
-  });
-
-  return tree;
-}
-
 export function funcTest() {
   // 0 代表顶级节点，无父节点
   const arr = [
@@ -99,8 +67,6 @@ export function funcTest() {
     * 解决方式： 参考 arr-to-tree-pro 中的方式
    */
   const tree = convert(arr);
-  const tree2 = convert2(arr);
 
   console.info(tree);
-  console.info(tree2);
 }
