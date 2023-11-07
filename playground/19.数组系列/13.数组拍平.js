@@ -36,6 +36,14 @@ function flat2(arr) {
   return result;
 }
 
+function paiping2(arr) {
+  arr = arr.reduce((initVal, item, index) => {
+    return initVal.concat(Array.isArray(item) ? paiping2(item) : item);
+  }, []);
+
+  return arr;
+}
+
 const arr1 = flat(arr);
 console.log(arr.flat(Infinity));
 // console.log(arr);

@@ -64,5 +64,14 @@ function unique2(arr) {
   }
 }
 
+function uniquePro(arr) {
+  return arr.reduce((initArr, item, next) => {
+    if (!initArr.includes(item)) {
+      initArr.push(item);
+    }
+    return initArr;
+  }, []);
+}
+
 // unique2(arr)
 // console.log(arr);
