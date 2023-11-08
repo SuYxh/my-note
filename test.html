@@ -10,181 +10,90 @@
 
 <body>
   <script>
+    // 示例: 输入:
+    // nums1 = [1,2,3,0,0,0], m = 3
+    // nums2 = [2,5,6], n = 3
+    // 输出: [1,2,2,3,5,6]
 
-    const delay = (time) => {
-      return new Promise((resolve, reject) => {
-        setTimeout(() => {
-          console.log('intervel', time);
-          resolve(time)
-        }, time);
-      })
-    }
-
-    const tasks = [
-      () => delay(1000),
-      () => delay(1002),
-      () => delay(1009),
-      () => delay(1006),
-      () => delay(1008),
-      () => delay(1005),
-    ]
-
-    const tasks2 = [
-      () => {
-        return delay(1000);
-      },
-      () => {
-        return delay(1003);
-      },
-      () => {
-        return delay(1005);
-      },
-      () => {
-        return delay(1002);
-      },
-      () => {
-        return delay(1004);
-      },
-      () => {
-        return delay(1006);
-      },
-    ];
-
-    class TaskQueue2 {
-      pool = 2;
-      running = 0;
-      queue = [];
-      result = [];
-
-      constructor(pool, cb) {
-        this.pool = pool || 2;
-        this.cb = cb;
-        this.promisify = new Promise((resolve, reject) => {
-          this.resolve = resolve;
-          this.reject = reject;
-        });
-      }
-
-      pushTask(task) {
-        this.queue.push(task);
-        this.next();
-      }
-
-      next() {
-        while (this.queue.length && this.running < this.pool) {
-          this.running++;
-          const task = this.queue.shift();
-
-          task()
-            .then((res) => {
-              this.result.push(res);
-            })
-            .catch((err) => {
-              console.log(err);
-              if (this.reject) {
-                this.reject(err);
-              }
-            })
-            .finally(() => {
-              this.running--;
-
-              this.next();
-            });
-        }
-
-        if (this.running === 0) {
-          if (typeof this.cb === "function") {
-            this.cb(this.result);
-          }
-          if (this.resolve) {
-            this.resolve(this.result);
-          }
+    /**
+ * @param {number[]} nums1
+ * @param {number} m
+ * @param {number[]} nums2
+ * @param {number} n
+ * @return {void} Do not return anything, modify nums1 in-place instead.
+ */
+    const merge = function (nums1, m, nums2, n) {
+      // 初始化两个指针的指向，初始化 nums1 尾部索引k
+      let i = m - 1, j = n - 1, k = m + n - 1
+      // 当两个数组都没遍历完时，指针同步移动
+      while (i >= 0 && j >= 0) {
+        // 取较大的值，从末尾往前填补
+        if (nums1[i] >= nums2[j]) {
+          nums1[k] = nums1[i]
+          i--
+          k--
+        } else {
+          nums1[k] = nums2[j]
+          j--
+          k--
         }
       }
 
-      promise() {
-        return this.promisify;
+      // nums2 留下的情况，特殊处理一下 
+      while (j >= 0) {
+        nums1[k] = nums2[j]
+        k--
+        j--
       }
+
+      console.log(nums1);
+      console.log(nums2);
+    };
+
+
+    console.log(merge([1,2,3,0,0,0], 3, [2,5,6], 3));
+
+
+    function isPalindrome(s) {
+      if ((s.length % 2)) {
+        return false
+      }
+
+      const num = s.length / 2
+
+      for (let i = 0; i < num; i++) {
+        const char = s[i];
+        console.log(char, s[s.length - i - 1]);
+        if (char !== s[s.length - i - 1]) {
+          return false
+        }
+      }
+
+      return true
     }
 
 
-    class TaskQueue {
-      running = 0
-      queue = []
-      result = []
+    function isPalindrome2(s) {
+      let start = 0
+      let end = s.length - 1
 
-      constructor(pool, cb) {
-        this.pool = pool ?? 2
-        this.cb = cb
-        this.promisify = new Promise((resolve, reject) => {
-          this.resolve = resolve
-          this.reject = reject
-        })
-      }
+      while (start <= end) {
+        const startStr = s[start]
+        const endStr = s[end]
 
-
-      pushTask(task) {
-        this.queue.push(task)
-
-        this.next()
-      }
-
-
-      next() {
-
-
-        while (this.queue.length && this.running < this.pool) {
-
-          const task = this.queue.shift()
-          this.running++
-
-          task().then((res) => {
-            this.result.push(res)
-          }).catch((err) => {
-            this.reject(err)
-          }).finally(() => {
-            this.running--
-
-            this.next()
-          })
-
+        if (startStr !== endStr) {
+          return false
         }
 
-        if (this.running === 0) {
-          if (typeof this.cb === "function") {
-            this.cb(this.result)
-          }
-
-          this.resolve(this.result)
-        }
-
+        start ++
+        end --
       }
-    
-      promise() {
-        return this.promisify
-      }
+
+      return true
     }
 
-    function limit(tasks, pool, cb) {
-      const taskQueue = new TaskQueue(pool, cb)
-
-      tasks.forEach(task => {
-        taskQueue.pushTask(task)
-      });
-
-      return taskQueue.promise()
-    }
-
-
-    // limit(tasks, 2, (res) => {
-    //   console.log('-->', res);
-    // })
-
-    limit(tasks, 2).then(res => {
-      console.log('res', res);
-    })
-
-
+    console.log('isPalindrome', isPalindrome('yessey'));
+    console.log('isPalindrome2', isPalindrome2('yessey'));
   </script>
 </body>
 

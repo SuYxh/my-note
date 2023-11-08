@@ -120,7 +120,85 @@
     //     console.error(err);
     //   });
 
+    function promiseAll(promises) {
+      return new Promise((resolve, reject) => {
+        let results = [];
+        let completedPromises = 0;
+        promises.forEach((promise, index) => {
+          Promise.resolve(promise).then(value => {
+            results[index] = value;
+            completedPromises += 1;
+            if (completedPromises === promises.length) {
+              resolve(results);
+            }
+          }).catch(reject); // 如果任何一个 promise 失败，则整个 promiseAll 被拒绝
+        });
+      });
+    }
 
+
+    Promise.all = function (promises) {
+      return new Promise((resolve, reject) => {
+        const result = []
+        let num = 0
+        promises.forEach((item, index) => {
+          Promise.resolve(item).then(res => {
+            result[index] = res
+            num++
+            if (num === promises.length) {
+              resolve(result)
+            }
+          }).catch(reject)
+        })
+      })
+    }
+
+
+    Promise.race = function (promise) {
+      return new Promise((resolve, reject) => {
+        promise.forEach((item) => {
+          Promise.resolve(item).then(resolve).catch(reject)
+        })
+      })
+    }
+
+
+    promiseAll([delay(1000), delay(1003), delay(1002), delay(1005)]).then((res) => {
+      console.log('promiseAll', res);
+    })
+
+    Promise.all([delay(1000), delay(1003), delay(1002), delay(1005)]).then((res) => {
+      console.log('Promise.all', res);
+    })
+
+    Promise.race([delay(1000), delay(1003), delay(1002), delay(1005)]).then((res) => {
+      console.log('Promise.race', res);
+    })
+
+
+    function transform(money) {
+      const numStr = money = money.toFixed(2)
+
+      const arr = numStr.split('.')
+      const a = arr[0]
+      const b = arr[1]
+
+      let counter = 0
+      let str = ''
+      for(let i = a.length - 1; i >= 0 ; i--) {
+        const char = a[i];
+        str = char + str
+        counter ++
+        if (counter === 3 && i !== 0) {
+          str = ',' + str
+          counter = 0 
+        }
+      }
+
+      return str + '.' + b
+
+    }
+    console.log('金钱格式化结果', transform(998765.234));
 
 
   </script>
