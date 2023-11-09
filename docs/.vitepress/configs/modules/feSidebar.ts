@@ -106,10 +106,10 @@ const sidebar = {
           text: "手写实现",
           link: "/fe/javascript/promise/手写实现",
         },
-        {
-          text: "并发控制",
-          link: "/fe/javascript/promise/任务执行",
-        },
+        // {
+        //   text: "并发控制",
+        //   link: "/fe/javascript/promise/任务执行",
+        // },
         {
           text: "技巧",
           link: "/fe/javascript/promise/案例",
