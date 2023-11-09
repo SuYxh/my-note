@@ -14,13 +14,15 @@ function curry(func) {
 }
 
 function curry(func) {
-  const length = func.length;
-  const params = [];
-  return function (...args) {
-    if (params.length >= length) {
-      func.apply(this, params);
+  let length = func.length;
+
+  return function curried(...agrs) {
+    if (agrs.length >= length) {
+      return func.apply(this, agrs);
     } else {
-      params = [...params, ...args];
+      return function (...params) {
+        return curried.apply(this, agrs.concat(params));
+      };
     }
   };
 }

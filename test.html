@@ -6,94 +6,64 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.js"></script>
+  <style>
+    body {
+      height: 200vh;
+    }
+  </style>
 </head>
 
 <body>
   <script>
-    // 示例: 输入:
-    // nums1 = [1,2,3,0,0,0], m = 3
-    // nums2 = [2,5,6], n = 3
-    // 输出: [1,2,2,3,5,6]
-
-    /**
- * @param {number[]} nums1
- * @param {number} m
- * @param {number[]} nums2
- * @param {number} n
- * @return {void} Do not return anything, modify nums1 in-place instead.
- */
-    const merge = function (nums1, m, nums2, n) {
-      // 初始化两个指针的指向，初始化 nums1 尾部索引k
-      let i = m - 1, j = n - 1, k = m + n - 1
-      // 当两个数组都没遍历完时，指针同步移动
-      while (i >= 0 && j >= 0) {
-        // 取较大的值，从末尾往前填补
-        if (nums1[i] >= nums2[j]) {
-          nums1[k] = nums1[i]
-          i--
-          k--
-        } else {
-          nums1[k] = nums2[j]
-          j--
-          k--
-        }
-      }
-
-      // nums2 留下的情况，特殊处理一下 
-      while (j >= 0) {
-        nums1[k] = nums2[j]
-        k--
-        j--
-      }
-
-      console.log(nums1);
-      console.log(nums2);
-    };
-
-
-    console.log(merge([1,2,3,0,0,0], 3, [2,5,6], 3));
-
-
-    function isPalindrome(s) {
-      if ((s.length % 2)) {
-        return false
-      }
-
-      const num = s.length / 2
-
-      for (let i = 0; i < num; i++) {
-        const char = s[i];
-        console.log(char, s[s.length - i - 1]);
-        if (char !== s[s.length - i - 1]) {
-          return false
-        }
-      }
-
-      return true
+    const delay = (time) => {
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve(time)
+        }, time);
+      })
     }
 
 
-    function isPalindrome2(s) {
-      let start = 0
-      let end = s.length - 1
+    Promise.all = function (tasks) {
+      // debugger
+      return new Promise((resolve, reject) => {
+        const result = []
+        let num = 0
 
-      while (start <= end) {
-        const startStr = s[start]
-        const endStr = s[end]
+        tasks.forEach((task, index) => {
+          
+          Promise.resolve(task).then(res => {
 
-        if (startStr !== endStr) {
-          return false
-        }
+            result[index] = res
+            num ++
 
-        start ++
-        end --
-      }
+            console.log(num, tasks.length);
 
-      return true
+            if (num >= tasks.length) {
+              resolve(result)
+            }
+          }).catch(reject)
+        });
+      })
     }
 
-    console.log('isPalindrome', isPalindrome('yessey'));
-    console.log('isPalindrome2', isPalindrome2('yessey'));
+
+    Promise.race = function (tasks) {
+      return new Promise((resolve, reject) => {
+        tasks.forEach(item => {
+          Promise.resolve(item).then(resolve).catch(reject)
+        })
+      })
+    }
+    
+    Promise.all([delay(1000), delay(1300), delay(1200), delay(1700)]).then(res => {
+      console.log(res);
+    })
+
+    Promise.race([delay(1000), delay(1300), delay(1200), delay(1700)]).then(res => {
+      console.log(res);
+    })
+
   </script>
 </body>
 
