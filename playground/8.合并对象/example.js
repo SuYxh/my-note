@@ -1,7 +1,7 @@
 /*
  * @Author: 时光@
  * @Date: 2022-07-04 23:24:35
- * @LastEditTime: 2023-09-20 19:39:25
+ * @LastEditTime: 2023-11-12 09:39:18
  * @Description: 合并对象
  */
 
@@ -111,3 +111,28 @@ function merge(options, params = {}) {
 }
 
 console.log(merge(options, params));
+
+function mergeOptions(options, params) {
+  // 创建一个新对象，以避免修改原始对象
+  let merged = { ...options };
+
+  // 遍历 params 对象
+  for (let key in params) {
+    // 检查是否是数组
+    if (Array.isArray(params[key])) {
+      // 合并或替换数组
+      merged[key] = [...(options[key] || []), ...params[key]];
+    } else if (typeof params[key] === "object" && params[key] !== null) {
+      // 如果是对象，则递归合并
+      merged[key] = mergeOptions(options[key] || {}, params[key]);
+    } else {
+      // 否则，直接覆盖或添加属性
+      merged[key] = params[key];
+    }
+  }
+
+  return merged;
+}
+
+// 使用方法
+const mergedOptions = mergeOptions(options, params);

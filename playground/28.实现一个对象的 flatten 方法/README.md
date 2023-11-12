@@ -1,4 +1,4 @@
-## 实现一个对象的 flatten 方法
+## 使用 js 实现一个对象的 flatten 方法
 
 ## 描述
 
@@ -38,6 +38,7 @@ function flatten(obj) {
     return;
   }
   let res = {};
+
   const dfs = (cur, prefix) => {
     if (isObject(cur)) {
       if (Array.isArray(cur)) {
@@ -53,9 +54,46 @@ function flatten(obj) {
       res[prefix] = cur;
     }
   };
+
   dfs(obj, "");
 
   return res;
 }
 flatten();
+```
+
+更好的代码：
+
+```js
+function flatten(obj) {
+  const result = [];
+
+  const recurse = (obj, prefix) => {
+    if (isObject(obj)) {
+      if (Array.isArray(obj)) {
+        for (let i = 0; i < obj.length; i++) {
+          const element = obj[i];
+          console.log(element);
+          recurse(
+            element,
+            `${prefix ? prefix + "[" + i + "]" : "[" + i + "]"}`
+          );
+        }
+      } else {
+        for (const key in obj) {
+          if (Object.hasOwnProperty.call(obj, key)) {
+            const val = obj[key];
+            recurse(val, `${prefix ? prefix + "." + key : key}`);
+          }
+        }
+      }
+    } else {
+      result[prefix] = obj;
+    }
+  };
+
+  recurse(obj, "");
+
+  return result;
+}
 ```

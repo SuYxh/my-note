@@ -15,54 +15,86 @@
 
 <body>
   <script>
-    const delay = (time) => {
-      return new Promise((resolve, reject) => {
-        setTimeout(() => {
-          resolve(time)
-        }, time);
-      })
+
+    const options = {
+      url: "",
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      data: null,
+      arr: [10, 20, 30],
+      config: {
+        xhr: {
+          async: true,
+          cache: false,
+        },
+      },
+    };
+
+    const params = {
+      url: "http://www.zhufengpeixun.cn/api/",
+      headers: {
+        "X-Token": "EF00F987DCFA6D31",
+      },
+      data: {
+        lx: 1,
+        from: "weixin",
+      },
+      arr: [30, 40],
+      config: {
+        xhr: {
+          cache: true,
+        },
+      },
+    };
+    function mergeOptions(options, params) {
+      // 创建一个新对象，以避免修改原始对象
+      let merged = { ...options };
+
+      // 遍历 params 对象
+      for (let key in params) {
+        // 检查是否是数组
+        if (Array.isArray(params[key])) {
+          // 合并或替换数组
+          merged[key] = [...(options[key] || []), ...params[key]];
+        } else if (typeof params[key] === 'object' && params[key] !== null) {
+          // 如果是对象，则递归合并
+          merged[key] = mergeOptions(options[key] || {}, params[key]);
+        } else {
+          // 否则，直接覆盖或添加属性
+          merged[key] = params[key];
+        }
+      }
+
+      return merged;
     }
 
+    function mergeOptions2(options, params) {
+      const merged = { ...options }
 
-    Promise.all = function (tasks) {
-      // debugger
-      return new Promise((resolve, reject) => {
-        const result = []
-        let num = 0
-
-        tasks.forEach((task, index) => {
+      for (const key in params) {
+        if (Object.hasOwnProperty.call(params, key)) {
+          const value = params[key];
           
-          Promise.resolve(task).then(res => {
+          if (Array.isArray(value)) {
+            merged[key] = [...(options[key] || []), ...value]
+          } else if (typeof value ==="object" && value !== null) {
+            merged[key] = mergeOptions2(options[key] || {}, value)
+          } else {
+            merged[key] = value
+          }
+        }
+      }
 
-            result[index] = res
-            num ++
-
-            console.log(num, tasks.length);
-
-            if (num >= tasks.length) {
-              resolve(result)
-            }
-          }).catch(reject)
-        });
-      })
+      return merged
     }
 
-
-    Promise.race = function (tasks) {
-      return new Promise((resolve, reject) => {
-        tasks.forEach(item => {
-          Promise.resolve(item).then(resolve).catch(reject)
-        })
-      })
-    }
-    
-    Promise.all([delay(1000), delay(1300), delay(1200), delay(1700)]).then(res => {
-      console.log(res);
-    })
-
-    Promise.race([delay(1000), delay(1300), delay(1200), delay(1700)]).then(res => {
-      console.log(res);
-    })
+    // 使用方法
+    const mergedOptions = mergeOptions2(options, params);
+    console.log(options);
+    console.log(params);
+    console.log(mergedOptions);
 
   </script>
 </body>

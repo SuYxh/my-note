@@ -49,3 +49,66 @@ function dom2Json(domtree) {
   return obj;
 }
 ```
+
+```js
+function _render(dom) {
+  let root = null;
+
+  const dfs = (dom, parentNode) => {
+    console.log(dom.tagName, dom.nodeType);
+    const attributes = {};
+    for (let attr of dom.attributes) {
+      attributes[attr.name] = attr.value;
+    }
+    const node = new TreeNode(dom.tagName, attributes);
+
+    if (parentNode) {
+      parentNode.children.push(node);
+    } else {
+      root = node;
+    }
+
+    if (dom.childNodes?.length) {
+      dom.childNodes?.forEach((child) => dfs(child, node));
+    }
+  };
+
+  dfs(dom, null);
+
+  return root;
+}
+```
+
+```js
+function _render2(dom) {
+  let root = null;
+
+  const dfs = (dom, parentNode) => {
+    if (dom.nodeType === Node.TEXT_NODE) {
+      // Handle text nodes by adding them directly to the parent node
+      parentNode.text = (parentNode.text || "") + dom.nodeValue;
+    } else if (dom.nodeType === Node.ELEMENT_NODE) {
+      // Convert attributes to a regular object
+      const attributes = {};
+      for (let attr of dom.attributes) {
+        attributes[attr.name] = attr.value;
+      }
+      const node = new TreeNode(dom.tagName.toLowerCase(), attributes);
+
+      // Add the new node to the parent, or set it as root if there's no parent
+      if (parentNode) {
+        parentNode.children.push(node);
+      } else {
+        root = node;
+      }
+
+      // Recursively process all child nodes
+      dom.childNodes.forEach((child) => dfs(child, node));
+    }
+  };
+
+  dfs(dom, null);
+
+  return root;
+}
+```
