@@ -1,6 +1,6 @@
 import list from "./singlyLinkedList.js";
 
-function fanzhuan(list) {
+function reversal(list) {
   let prev = null;
   let curr = list;
 
@@ -17,27 +17,5 @@ function fanzhuan(list) {
   return prev;
 }
 
-// const res = fanzhuan(list);
+// const res = reversal(list);
 // console.log(res);
-
-function fz(list) {
-  let p1 = list;
-  let p2 = null;
-
-  while (p1) {
-    const tmp = p1.next;
-    p1.next = p2;
-
-    p2 = p1;
-    p1 = tmp;
-  }
-
-  console.log("p2");
-  console.log(p2);
-  return p2;
-}
-
-const res2 = fz(list);
-console.log(res2);
-
-export default {};

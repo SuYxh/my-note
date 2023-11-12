@@ -1,6 +1,6 @@
 const data = [1, 2, 3, 4, 5];
 
-class SingleListNode {
+export class SingleListNode {
   constructor(val) {
     this.value = val;
     this.next = null;

@@ -1,12 +1,23 @@
-var deleteDuplicates = function (head) {
-  let p = head;
+import {
+  generateSingleLinkedList,
+  SingleListNode,
+} from "./singlyLinkedList.js";
+
+const l = generateSingleLinkedList([1, 3, 3, 4]);
+
+function deleteDuplicates(l) {
+  let p = l;
+
   while (p && p.next) {
-    if (p.val === p.next.val) {
+    if (p.value === p.next.value) {
       p.next = p.next.next;
     } else {
       p = p.next;
     }
   }
 
-  return head;
-};
+  return l;
+}
+
+const result = deleteDuplicates(l);
+console.log("result", result);

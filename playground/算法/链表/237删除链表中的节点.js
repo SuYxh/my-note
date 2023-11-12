@@ -1,23 +1,5 @@
 import list from "./singlyLinkedList.js";
-// console.log(list);
 
-// 自己写的 乞丐版
-function deleteNode0(list, target) {
-  let head = list;
-  let current = head;
-
-  while (current.next) {
-    console.log(current.value);
-    if (current.next.value === target) {
-      current.next = current.next.next;
-    }
-    current = current.next;
-  }
-
-  return head;
-}
-
-// 标准版
 function deleteNode(head, value) {
   if (head === null) {
     return null;
@@ -40,7 +22,7 @@ function deleteNode(head, value) {
   return head;
 }
 
-const res = deleteNode0(list, 3);
+const res = deleteNode(list, 3);
 console.log(res);
 
 export default {};
