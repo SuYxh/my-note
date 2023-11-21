@@ -15,87 +15,95 @@
 
 <body>
   <script>
-
-    const options = {
-      url: "",
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      data: null,
-      arr: [10, 20, 30],
-      config: {
-        xhr: {
-          async: true,
-          cache: false,
-        },
-      },
-    };
-
-    const params = {
-      url: "http://www.zhufengpeixun.cn/api/",
-      headers: {
-        "X-Token": "EF00F987DCFA6D31",
-      },
-      data: {
-        lx: 1,
-        from: "weixin",
-      },
-      arr: [30, 40],
-      config: {
-        xhr: {
-          cache: true,
-        },
-      },
-    };
-    function mergeOptions(options, params) {
-      // 创建一个新对象，以避免修改原始对象
-      let merged = { ...options };
-
-      // 遍历 params 对象
-      for (let key in params) {
-        // 检查是否是数组
-        if (Array.isArray(params[key])) {
-          // 合并或替换数组
-          merged[key] = [...(options[key] || []), ...params[key]];
-        } else if (typeof params[key] === 'object' && params[key] !== null) {
-          // 如果是对象，则递归合并
-          merged[key] = mergeOptions(options[key] || {}, params[key]);
-        } else {
-          // 否则，直接覆盖或添加属性
-          merged[key] = params[key];
-        }
-      }
-
-      return merged;
+    const arr = [
+      { id: 2, name: '部门B', parentId: 1 },
+      { id: 3, name: '部门C', parentId: 1 },
+      { id: 4, name: '部门D', parentId: 2 },
+      { id: 5, name: '部门E', parentId: 2 },
+      { id: 1, name: '部门A', parentId: 0 },
+      { id: 6, name: '部门F', parentId: 3 },
+    ]
+    
+    function TreeNode(id, name) {
+      this.id = id
+      this.name = name
+      this.children = []
     }
+  
+    function arrTotree(arr) {
+      let tree = null
+      const map = new Map()
 
-    function mergeOptions2(options, params) {
-      const merged = { ...options }
+      arr.forEach(({id, name}) => {
+        map.set(id, new TreeNode(id, name))
+      });
 
-      for (const key in params) {
-        if (Object.hasOwnProperty.call(params, key)) {
-          const value = params[key];
-          
-          if (Array.isArray(value)) {
-            merged[key] = [...(options[key] || []), ...value]
-          } else if (typeof value ==="object" && value !== null) {
-            merged[key] = mergeOptions2(options[key] || {}, value)
-          } else {
-            merged[key] = value
+
+      arr.forEach(({id, name, parentId}) => {
+        const node = map.get(id)
+        if (parentId === 0) {
+          tree = node
+        } else {
+          const parentNode = map.get(parentId)
+          if (parentNode) {
+            parentNode.children.push(node)
           }
         }
-      }
+      })
 
-      return merged
+      return tree
     }
 
-    // 使用方法
-    const mergedOptions = mergeOptions2(options, params);
-    console.log(options);
-    console.log(params);
-    console.log(mergedOptions);
+    // const tree = arrTotree(arr)
+    // console.log(tree);
 
+
+    function treeToarr(tree) {
+      const arr = []
+
+      const dfs = (root, parentNode) => {
+        arr.push({ id: root.id, name: root.name, parentId: parentNode?.id || 0 })
+
+        if (root.children.length) {
+          root.children.forEach(item => dfs(item, root))
+        }
+      }
+
+
+      dfs(tree, null)
+
+      return arr
+    }
+
+    // setTimeout(() => {
+    //   const arr1 = treeToarr(tree)
+    //   console.log(arr1); 
+    // }, 1000);
+
+    function binarySearch(arr, target) {
+      let left = 0
+      let right = arr.length - 1
+
+      while (left <= right) {
+        const mid = Math.floor((left + right) / 2)
+        const midVal = arr[mid]
+
+        if (midVal === target) {
+          return mid
+        }
+
+        if (midVal > target) {
+          right = mid -1
+        } else {
+          left = mid + 1
+        }
+      }
+
+      return -1
+    }
+
+    let sortedArray = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+console.log(binarySearch(sortedArray, 5)); // 输出：4
   </script>
 </body>
 

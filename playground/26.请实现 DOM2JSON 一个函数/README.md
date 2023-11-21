@@ -112,3 +112,34 @@ function _render2(dom) {
   return root;
 }
 ```
+
+```js
+function _render(dom) {
+  let vnode = null;
+
+  const stack = [];
+  stack.push([dom, null]);
+
+  while (stack.length) {
+    const [el, parentNode] = stack.pop();
+
+    const attributes = {};
+    for (let attr of el.attributes) {
+      attributes[attr.name] = attr.value;
+    }
+    const node = new TreeNode(el.tagName, attributes);
+
+    if (!parentNode) {
+      vnode = node;
+    } else {
+      parentNode.children.push(node);
+    }
+
+    if (el.childNodes) {
+      el.childNodes.forEach((item) => stack.push([item, node]));
+    }
+  }
+
+  return vnode;
+}
+```
