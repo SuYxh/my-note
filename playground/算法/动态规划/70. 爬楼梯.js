@@ -27,6 +27,8 @@ function climbStairsPro(n) {
   let dp0 = 1;
   let dp1 = 1;
 
+  // 1, 1, 2, 3, 5, 8, 13, 21
+
   for (let i = 2; i <= n; i++) {
     const tmp = dp0;
     dp0 = dp1;

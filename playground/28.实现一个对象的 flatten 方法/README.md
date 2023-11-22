@@ -34,38 +34,6 @@ function isObject(val) {
 }
 
 function flatten(obj) {
-  if (!isObject(obj)) {
-    return;
-  }
-  let res = {};
-
-  const dfs = (cur, prefix) => {
-    if (isObject(cur)) {
-      if (Array.isArray(cur)) {
-        cur.forEach((item, index) => {
-          dfs(item, `${prefix}[${index}]`);
-        });
-      } else {
-        for (let k in cur) {
-          dfs(cur[k], `${prefix}${prefix ? "." : ""}${k}`);
-        }
-      }
-    } else {
-      res[prefix] = cur;
-    }
-  };
-
-  dfs(obj, "");
-
-  return res;
-}
-flatten();
-```
-
-更好的代码：
-
-```js
-function flatten(obj) {
   const result = [];
 
   const recurse = (obj, prefix) => {

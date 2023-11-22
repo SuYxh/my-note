@@ -15,96 +15,92 @@
 
 <body>
   <script>
-    const arr = [
-      { id: 2, name: '部门B', parentId: 1 },
-      { id: 3, name: '部门C', parentId: 1 },
-      { id: 4, name: '部门D', parentId: 2 },
-      { id: 5, name: '部门E', parentId: 2 },
-      { id: 1, name: '部门A', parentId: 0 },
-      { id: 6, name: '部门F', parentId: 3 },
-    ]
-    
-    function TreeNode(id, name) {
-      this.id = id
-      this.name = name
-      this.children = []
-    }
-  
-    function arrTotree(arr) {
-      let tree = null
-      const map = new Map()
-
-      arr.forEach(({id, name}) => {
-        map.set(id, new TreeNode(id, name))
-      });
-
-
-      arr.forEach(({id, name, parentId}) => {
-        const node = map.get(id)
-        if (parentId === 0) {
-          tree = node
-        } else {
-          const parentNode = map.get(parentId)
-          if (parentNode) {
-            parentNode.children.push(node)
-          }
-        }
-      })
-
-      return tree
-    }
-
-    // const tree = arrTotree(arr)
-    // console.log(tree);
-
-
-    function treeToarr(tree) {
-      const arr = []
-
-      const dfs = (root, parentNode) => {
-        arr.push({ id: root.id, name: root.name, parentId: parentNode?.id || 0 })
-
-        if (root.children.length) {
-          root.children.forEach(item => dfs(item, root))
-        }
+    function isSameTree(p, q) {
+      if (q === null && q === null) {
+        return true
       }
 
 
-      dfs(tree, null)
-
-      return arr
-    }
-
-    // setTimeout(() => {
-    //   const arr1 = treeToarr(tree)
-    //   console.log(arr1); 
-    // }, 1000);
-
-    function binarySearch(arr, target) {
-      let left = 0
-      let right = arr.length - 1
-
-      while (left <= right) {
-        const mid = Math.floor((left + right) / 2)
-        const midVal = arr[mid]
-
-        if (midVal === target) {
-          return mid
-        }
-
-        if (midVal > target) {
-          right = mid -1
-        } else {
-          left = mid + 1
-        }
+      if (p === null || q === null || p.val !== q.val) {
+        return false
       }
 
-      return -1
+      return isSameTree(p.left, q.left) && isSameTree(p.right, q.right)
     }
 
-    let sortedArray = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-console.log(binarySearch(sortedArray, 5)); // 输出：4
+    function isSymmetric(root) {
+      if (root === null) {
+        return true
+      }
+
+      const isMirror = (left, right) => {
+        if (left === null && right === null) {
+          return true
+        }
+
+        if (left === null || right === null) {
+          return false
+        }
+
+        return left.value === right.value && isMirror(left.left, right.right) && isMirror(left.right, right.left)
+      }
+
+
+      return isMirror(root.left, root.right)
+    }
+
+
+    function invertTree(root) {
+      if (root === null) {
+        return null
+      }
+
+      [root.left, root.right] = [root.right, root.left]
+
+
+      invertTree(root.left)
+      invertTree(root.right)
+    }
+
+    function climbStairsPro(n) {
+  if (n < 2) {
+    return 1;
+  }
+
+  let dp0 = 1;
+  let dp1 = 1;
+
+  for (let i = 2; i <= n; i++) {
+    const tmp = dp0;
+    dp0 = dp1;
+    dp1 = dp1 + tmp;
+  }
+
+  return dp1;
+}
+
+
+function  plt(n) {
+  if (n < 2) {
+    return 1
+  }
+
+  let dp0 = 1
+  let dp1 = 1
+
+  // 1, 1, 2, 3, 5, 8, 13, 21
+
+  for (let i = 2; i < n; i++) {
+    const tmp = dp0
+    dp0 = dp1
+    dp1 = tmp + dp1
+  }
+
+  return dp1
+}
+
   </script>
+
 </body>
 
 </html>

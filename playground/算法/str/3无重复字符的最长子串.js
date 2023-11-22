@@ -18,6 +18,28 @@ function lengthOfLongestSubstring(s) {
   return maxLength;
 }
 
+function lengthOfLongestSubstring2(str) {
+  let left = 0;
+  let right = 0;
+  let max = 0;
+  let chars = [];
+
+  for (let i = 0; i < str.length; i++) {
+    const char = str[i];
+
+    if (!chars.includes(char)) {
+      chars.push(char);
+      right++;
+      max = Math.max(max, chars.length);
+    } else {
+      left = i;
+      chars = [];
+    }
+  }
+
+  return max;
+}
+
 const res1 = lengthOfLongestSubstring("abcabcbb");
 console.log(res1);
 
