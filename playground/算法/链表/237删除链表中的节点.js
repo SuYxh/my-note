@@ -14,7 +14,6 @@ function deleteNode(head, value) {
   while (current.next !== null) {
     if (current.next.value === value) {
       current.next = current.next.next;
-      // return head;
     }
     current = current.next;
   }

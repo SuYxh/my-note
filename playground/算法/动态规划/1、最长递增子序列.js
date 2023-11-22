@@ -43,13 +43,15 @@ function lengthOfLIS(nums) {
   if (nums.length === 0) return 0;
 
   let tails = [nums[0]];
+
   for (let num of nums) {
     if (num > tails[tails.length - 1]) {
       tails.push(num);
     } else {
       // 二分查找在 tails 中找到第一个大于等于 num 的数的位置
-      let left = 0,
-        right = tails.length - 1;
+      let left = 0;
+      let right = tails.length - 1;
+
       while (left < right) {
         let mid = left + Math.floor((right - left) / 2);
         if (tails[mid] < num) {
@@ -58,6 +60,7 @@ function lengthOfLIS(nums) {
           right = mid;
         }
       }
+
       tails[left] = num;
     }
   }
