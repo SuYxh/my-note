@@ -2,8 +2,8 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Document</title>
   <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.js"></script>
   <style>
@@ -15,92 +15,26 @@
 
 <body>
   <script>
-    function isSameTree(p, q) {
-      if (q === null && q === null) {
-        return true
-      }
+    function transformStr(str) {
+      const arr = str.split(".");
+      let result = {};
+      let p = result;
 
+      arr.forEach((key, index) => {
+        p[key] = {};
 
-      if (p === null || q === null || p.val !== q.val) {
-        return false
-      }
-
-      return isSameTree(p.left, q.left) && isSameTree(p.right, q.right)
-    }
-
-    function isSymmetric(root) {
-      if (root === null) {
-        return true
-      }
-
-      const isMirror = (left, right) => {
-        if (left === null && right === null) {
-          return true
+        if (index === arr.length - 1) {
+          p[key] = null;
         }
+        
+        p = p[key];
+      });
 
-        if (left === null || right === null) {
-          return false
-        }
-
-        return left.value === right.value && isMirror(left.left, right.right) && isMirror(left.right, right.left)
-      }
-
-
-      return isMirror(root.left, root.right)
+      return result;
     }
 
-
-    function invertTree(root) {
-      if (root === null) {
-        return null
-      }
-
-      [root.left, root.right] = [root.right, root.left]
-
-
-      invertTree(root.left)
-      invertTree(root.right)
-    }
-
-    function climbStairsPro(n) {
-  if (n < 2) {
-    return 1;
-  }
-
-  let dp0 = 1;
-  let dp1 = 1;
-
-  for (let i = 2; i <= n; i++) {
-    const tmp = dp0;
-    dp0 = dp1;
-    dp1 = dp1 + tmp;
-  }
-
-  return dp1;
-}
-
-
-function  plt(n) {
-  if (n < 2) {
-    return 1
-  }
-
-  let dp0 = 1
-  let dp1 = 1
-
-  // 1, 1, 2, 3, 5, 8, 13, 21
-
-  for (let i = 2; i < n; i++) {
-    const tmp = dp0
-    dp0 = dp1
-    dp1 = tmp + dp1
-  }
-
-  return dp1
-}
-
+    console.log(transformStr("a.b.c"));
   </script>
-
 </body>
 
 </html>
