@@ -65,20 +65,6 @@
         console.log([a, b]);
         return false;
       }
-
-
-      Function.prototype.myBind = function (context, ...params) {
-        const self = this
-        return function proxy(...args) {
-          self.apply(context, params.concat(args))
-        }
-      }
-
-      let bound = original.bind(obj, 1);
-      let bound2 = original.myBind(obj, 1);
-
-      let boundResult = bound(2);
-      let boundResult2 = bound2(2);
     </script>
   </body>
 

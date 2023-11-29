@@ -17,21 +17,3 @@ function transform2Hump(str) {
 const res = transform2Hump(str);
 
 console.log(res);
-
-function transform(str) {
-  const firstToUpperCase = (char) => {
-    if (typeof char !== "string" || !char.length) {
-      return str;
-    }
-    return char.charAt(0).toUpperCase() + char.slice(1);
-  };
-
-  const newStr = str
-    .split("-")
-    .map((item, index) => (index === 0 ? item : firstToUpperCase(item)))
-    .join("");
-
-  return newStr;
-}
-
-console.log(transform(str));

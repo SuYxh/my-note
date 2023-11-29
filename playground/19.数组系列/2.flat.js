@@ -80,11 +80,3 @@ function flatten2(array) {
 const a = flatten2(data);
 
 console.log("a", a);
-
-function f4(array) {
-  return array.reduce((arr, curr, index) => {
-    return arr.concat(Array.isArray(curr) ? f4(curr) : curr);
-  }, []);
-}
-
-console.log("<--", f4(arr));
