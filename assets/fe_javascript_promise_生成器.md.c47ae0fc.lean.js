@@ -1,0 +1,1 @@
+import{_ as e,o as t,c as a}from"./chunks/framework.fb3766a7.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"fe/javascript/promise/生成器.md","lastUpdated":1706873516000}'),r={name:"fe/javascript/promise/生成器.md"};function s(o,c,p,n,_,i){return t(),a("div")}const f=e(r,[["render",s]]);export{m as __pageData,f as default};

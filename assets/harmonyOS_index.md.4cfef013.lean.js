@@ -1,0 +1,1 @@
+import{_ as e,o as r,c as o,Q as t}from"./chunks/framework.fb3766a7.js";const _=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"harmonyOS/index.md","lastUpdated":1706873516000}'),a={name:"harmonyOS/index.md"},n=t("",23),p=[n];function c(s,h,m,i,l,u){return r(),o("div",null,p)}const f=e(a,[["render",c]]);export{_ as __pageData,f as default};
