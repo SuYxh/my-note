@@ -1,30 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
 
-  <body>
-    <script>
-      function instanceOf(leftVaule, rightVaule) {
-        let rightProto = rightVaule.prototype // 取右表达式的 prototype 值
-        leftVaule = leftVaule.__proto__ // 取左表达式的__proto__值
-        while (true) {
-          if (leftVaule === null) {
-            return false
-          }
-          if (leftVaule === rightProto) {
-            return true
-          }
-          leftVaule = leftVaule.__proto__
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    function instanceOf(leftVaule, rightVaule) {
+      let rightProto = rightVaule.prototype // 取右表达式的 prototype 值
+      leftVaule = leftVaule.__proto__ // 取左表达式的__proto__值
+      while (true) {
+        if (leftVaule === null) {
+          return false
         }
+        if (leftVaule === rightProto) {
+          return true
+        }
+        leftVaule = leftVaule.__proto__
       }
+    }
 
-      console.log([] instanceof Array)
-      console.log(instanceOf([], Array))
-    </script>
-  </body>
+    console.log([] instanceof Array)
+    console.log(instanceOf([], Array))
+
+    /*
+          instance_of：对内置instanceof的重写
+       @params
+         obj:要检测的实例
+         ctor:要检测的构造函数/类
+       @return
+         boolean
+     */
+    /* var instance_of = function instance_of(obj, ctor) {
+        // 检测值类型的校验：校验ctor的格式
+        if (ctor === null || !/^(object|function)$/.test(typeof ctor)) throw new TypeError('Right-hand side of instanceof is not an object');
+        if (typeof ctor !== 'function') throw new TypeError('Right-hand side of instanceof is not callable');
+        if (!ctor.prototype) throw new TypeError('Function has non-object prototype undefined in instanceof check');
+        // 检测值类型的校验：不支持原始值类型
+        if (obj === null || !/^(object|function)$/.test(typeof obj)) return false;
+        // 首先检测ctor是否拥有Symbol.hasInstance方法
+        if (typeof Symbol !== "undefined") {
+            var hasInstance = ctor[Symbol.hasInstance];
+            if (typeof hasInstance === "function") {
+                return hasInstance.call(ctor, obj); //=> ctor[Symbol.hasInstance](obj);
+            }
+        }
+        // 按照原型链进行查找，看是否会出现ctor.prototype
+        var proto = Object.getPrototypeOf(obj);
+        while (proto) {
+            if (proto === ctor.prototype) return true;
+            proto = Object.getPrototypeOf(proto);
+        }
+        return false;
+    };
+    var arr = [10, 20];
+    console.log(instance_of(arr, Array)); //true
+    console.log(instance_of(arr, RegExp)); //false
+    console.log(instance_of(arr, Object)); //true */
+  </script>
+</body>
+
 </html>

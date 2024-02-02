@@ -1,3 +1,5 @@
+// forEach map find reduce some every
+
 Array.prototype.x_forEach = function (callback, content) {
   let self = this,
     i = 0,
