@@ -137,6 +137,13 @@ const sidebar = {
         { text: "jwt", link: "/fe/javascript/webStorage/jwt" },
       ],
     },
+    {
+      text: "web API",
+      collapsed: false,
+      items: [
+        { text: "WebWorker", link: "/fe/javascript/webapi/WebWorker" },
+      ],
+    },
   ],
   "/fe/es6/": [
     {

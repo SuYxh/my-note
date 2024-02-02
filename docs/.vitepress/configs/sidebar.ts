@@ -9,6 +9,7 @@ import toolSidebar from "./modules/toolSidebar";
 import wxSidebar from "./modules/wxSidebar";
 import interviewSidebar from "./modules/interviewSidebar";
 import sqlSidebar from "./modules/sqlSidebar";
+import standardSidebar from './modules/standardSidebar';
 
 export const sidebar: DefaultTheme.Config["sidebar"] = {
   // 前端基础
@@ -25,4 +26,5 @@ export const sidebar: DefaultTheme.Config["sidebar"] = {
   ...wxSidebar,
   ...interviewSidebar,
   ...sqlSidebar,
+  ...standardSidebar
 };
