@@ -21,15 +21,10 @@
     "build:github": "cross-env APP_BASE_PATH=/my-note/ npm run build",
     "build:blog": "cross-env APP_BASE_PATH=/blog/ npm run build",
     "lint": "prettier --write .",
-    "prepare": "husky install",
-    "serve": "vite --port 5175",
-    "build:page": "vite build",
-    "preview": "vite preview"
+    "prepare": "husky install"
   },
   "dependencies": {
-    "element-plus": "^2.3.9",
-    "vue": "^3.3.4",
-    "vue-router": "^4.2.4"
+    "vue": "^3.3.4"
   },
   "devDependencies": {
     "@mdit-vue/shared": "^0.12.0",
