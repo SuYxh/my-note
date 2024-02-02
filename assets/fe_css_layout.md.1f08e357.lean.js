@@ -1,0 +1,1 @@
+import{_ as s,o as n,c as a,Q as l}from"./chunks/framework.03641bbc.js";const A=JSON.parse('{"title":"布局","description":"","frontmatter":{},"headers":[],"relativePath":"fe/css/layout.md","lastUpdated":1706868598000}'),p={name:"fe/css/layout.md"},o=l("",43),e=[o];function t(r,c,D,F,y,C){return n(),a("div",null,e)}const b=s(p,[["render",t]]);export{A as __pageData,b as default};
