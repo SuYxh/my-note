@@ -9,9 +9,37 @@ const sidebar = {
 
   "/build/": [
     {
+      text: "esbuild",
+      collapsed: false,
+      items: [
+        { text: "使用", link: "/build/esbuild/Esbuild功能使用" },
+        { text: "插件开发", link: "/build/esbuild/Esbuild插件开发" }
+      ],
+    },
+    {
+      text: "rollup",
+      collapsed: false,
+      items: [
+        { text: "使用", link: "/build/rollup/Rollup使用" },
+        { text: "插件机制", link: "/build/rollup/Rollup插件机制" },
+      ],
+    },
+    {
       text: "vite",
       collapsed: false,
-      items: [{ text: "vite", link: "/build/vite/" }],
+      items: [
+        { text: "简介", link: "/build/vite/index" },
+        { text: "模块化知识", link: "/build/vite/模块化" },
+        { text: "如何处理css", link: "/build/vite/如何处理css" },
+        { text: "如何处理静态资源", link: "/build/vite/如何处理静态资源" },
+        { text: "依赖预构建", link: "/build/vite/依赖预构建" },
+        { text: "双引擎架构", link: "/build/vite/双引擎架构" },
+        { text: "插件开发", link: "/build/vite/vite插件开发" },
+        { text: "HMR原理", link: "/build/vite/HMR原理" },
+        { text: "代码分割", link: "/build/vite/代码分割" },
+        { text: "语法降级与Polyfill", link: "/build/vite/语法降级与Polyfill" },
+        { text: "性能优化", link: "/build/vite/性能优化" },
+      ],
     },
     {
       text: "webpack",
