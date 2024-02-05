@@ -1,1 +1,0 @@
-import{_ as s,o as e,c as n,Q as a}from"./chunks/framework.fb3766a7.js";const b=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"standard/代码规范.md","lastUpdated":1706873516000}'),t={name:"standard/代码规范.md"},l=a("",141),o=[l];function p(i,c,r,d,u,y){return e(),n("div",null,o)}const g=s(t,[["render",p]]);export{b as __pageData,g as default};
