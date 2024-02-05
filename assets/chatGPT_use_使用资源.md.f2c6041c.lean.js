@@ -1,1 +1,0 @@
-import{_ as a,o as e,c as t,Q as r}from"./chunks/framework.fb3766a7.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"chatGPT/use/使用资源.md","lastUpdated":1707145584000}'),d={name:"chatGPT/use/使用资源.md"},n=r("",9),o=[n];function s(h,p,c,i,f,_){return e(),t("div",null,o)}const b=a(d,[["render",s]]);export{m as __pageData,b as default};

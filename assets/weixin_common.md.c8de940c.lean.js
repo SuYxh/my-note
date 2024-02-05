@@ -1,0 +1,1 @@
+import{_ as e,o as a,c as t,Q as o}from"./chunks/framework.fb3766a7.js";const u=JSON.parse('{"title":"相关介绍","description":"","frontmatter":{},"headers":[],"relativePath":"weixin/common.md","lastUpdated":1707145808000}'),n={name:"weixin/common.md"},c=o("",3),s=[c];function r(i,_,d,l,h,m){return a(),t("div",null,s)}const f=e(n,[["render",r]]);export{u as __pageData,f as default};
