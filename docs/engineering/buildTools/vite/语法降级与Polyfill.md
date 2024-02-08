@@ -52,7 +52,7 @@ import "core-js/modules/es6.set.js"
 
 如果你没拉取仓库的代码，可以先按照如下的命令初始化项目:
 
-```arduino
+```bash
 mkdir babel-test 
 npm init -y
 ```

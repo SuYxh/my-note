@@ -62,13 +62,6 @@ export default {
     });
   },
   enhanceApp({ app, router }: EnhanceAppContext) {
-    console.log(router);
-
-    // if (router.route.path === '/') {
-    //   router.go('/fe/javascript/types')
-    //   return
-    // }
-
     // @ts-ignore
     app.component("MNavLinks", MNavLinks);
 
