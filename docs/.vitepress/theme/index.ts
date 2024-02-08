@@ -51,12 +51,16 @@ export default {
        * https://vitepress.dev/guide/extending-default-theme#layout-slots
        * https://github.com/vuejs/vitepress/blob/main/src/client/theme-default/Layout.vue
        */
+      // @ts-ignore
       "nav-bar-title-after": () => h(MNavVisitor),
+      // @ts-ignore
       "doc-after": () => h(MDocFooter),
+      // @ts-ignore
       "aside-bottom": () => h(MAsideSponsors),
     });
   },
   enhanceApp({ app, router }: EnhanceAppContext) {
+    // @ts-ignore
     app.component("MNavLinks", MNavLinks);
 
     app.provide("DEV", process.env.NODE_ENV === "development");
