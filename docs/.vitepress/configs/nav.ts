@@ -2,11 +2,8 @@ import type { DefaultTheme } from "vitepress";
 import feBase from "./modules/feBase";
 import frame from "./modules/frame";
 import build from "./modules/build";
-import tools from "./modules/tools";
-import chatgpt from "./modules/chatgpt";
-import pit from "./modules/pit";
 import me from "./modules/me";
-import computerBase from "./modules/computerBase";
+import subject from "./modules/subject";
 import afterEnd from "./modules/afterEnd";
 
 export const nav: DefaultTheme.Config["nav"] = [
@@ -21,13 +18,10 @@ export const nav: DefaultTheme.Config["nav"] = [
   // 数据库
   afterEnd,
   // 工具
-  tools,
+  // { text: "工具", link: "/tools/index", activeMatch: "^/tools" },
   // 计算机基础
-  computerBase,
+  subject,
   // 踩坑记录
-  pit,
-  // chatgpt
-  chatgpt,
   // 关于我
   me,
 ];

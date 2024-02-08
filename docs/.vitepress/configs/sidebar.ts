@@ -2,11 +2,9 @@ import type { DefaultTheme } from "vitepress";
 import feSidebar from "./modules/feSidebar";
 import frameSidebar from "./modules/frameSidebar";
 import buildSidebar from "./modules/buildSidebar";
-import dataStructureSidebar from "./modules/dataStructureSidebar";
+import subjectSidebar from "./modules/subjectSidebar";
 import pit from "./modules/pitSidebar";
-import chatgptSidebar from "./modules/chatgptSidebar";
 import toolSidebar from "./modules/toolSidebar";
-import wxSidebar from "./modules/wxSidebar";
 import interviewSidebar from "./modules/interviewSidebar";
 import afterEndSidebar from "./modules/afterEndSidebar";
 
@@ -19,10 +17,8 @@ export const sidebar: DefaultTheme.Config["sidebar"] = {
   ...buildSidebar,
 
   ...pit,
-  ...dataStructureSidebar,
-  ...chatgptSidebar,
+  ...subjectSidebar,
   ...toolSidebar,
-  ...wxSidebar,
   ...interviewSidebar,
   ...afterEndSidebar,
 };

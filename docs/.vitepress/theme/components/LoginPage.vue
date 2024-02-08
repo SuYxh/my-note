@@ -3,11 +3,11 @@
     <form class="login-form" @submit.prevent="login">
       <h1 class="login-title">Login</h1>
       <div class="form-item">
-        <label for="username">Username:</label>
+        <label for="username">Username</label>
         <input id="username" v-model="username" type="text" required placeholder="Username" class="input"/>
       </div>
       <div class="form-item">
-        <label for="password">Password:</label>
+        <label for="password">Password</label>
         <input id="password" v-model="password" type="password" required placeholder="Password" class="input"/>
       </div>
       <button type="submit" class="login-button">Login</button>
@@ -28,11 +28,6 @@ export default {
   },
   methods: {
     async login() {
-      // 实现登录逻辑
-      console.log("Logging in with:", this.username, this.password);
-      // 通常是发送一个请求到后端API进行验证
-      // 如果登录成功，存储token并重定向到受保护的页面
-
       const flag =  await verifyInputCredentials(this.username, this.password)
 
       if (flag) {
@@ -49,7 +44,6 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* height: 100vh; */
 }
 
 .login-form {
