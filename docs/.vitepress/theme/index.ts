@@ -6,6 +6,8 @@ import MNavVisitor from "./components/MNavVisitor.vue";
 import MDocFooter from "./components/MDocFooter.vue";
 import MAsideSponsors from "./components/MAsideSponsors.vue";
 import MNavLinks from "./components/MNavLinks.vue";
+import LoginPage from './components/LoginPage.vue';
+import { verifyStorageCredentials } from './storage';
 
 import "./styles/index.scss";
 
@@ -54,14 +56,24 @@ export default {
       // @ts-ignore
       "nav-bar-title-after": () => h(MNavVisitor),
       // @ts-ignore
-      "doc-after": () => h(MDocFooter),
+      // "doc-after": () => h(MDocFooter),
       // @ts-ignore
       "aside-bottom": () => h(MAsideSponsors),
     });
   },
   enhanceApp({ app, router }: EnhanceAppContext) {
+    console.log(router);
+
+    // if (router.route.path === '/') {
+    //   router.go('/fe/javascript/types')
+    //   return
+    // }
+
     // @ts-ignore
     app.component("MNavLinks", MNavLinks);
+
+    // @ts-ignore
+    app.component("LoginPage", LoginPage);
 
     app.provide("DEV", process.env.NODE_ENV === "development");
 
@@ -69,6 +81,16 @@ export default {
       watch(
         () => router.route.data.relativePath,
         () => updateHomePageStyle(location.pathname === "/"),
+        { immediate: true }
+      );
+
+      watch(
+        () => router.route.path,
+        (newVal) => {
+          if (newVal.includes('interview') && !verifyStorageCredentials()) {
+            router.go(`/login?redirect=${encodeURIComponent(newVal)}`)
+          }
+        },
         { immediate: true }
       );
     }

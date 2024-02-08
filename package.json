@@ -24,6 +24,8 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "crypto-js": "^4.2.0",
+    "localforage": "^1.10.0",
     "vue": "^3.3.4"
   },
   "devDependencies": {
@@ -40,7 +42,7 @@
     "unplugin-auto-import": "^0.16.6",
     "unplugin-vue-components": "^0.25.1",
     "vite": "^4.4.5",
-    "vitepress": "1.0.0-alpha.60",
+    "vitepress": "1.0.0-rc.42",
     "vue-tsc": "^1.8.8"
   },
   "lint-staged": {
