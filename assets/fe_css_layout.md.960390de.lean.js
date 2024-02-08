@@ -1,0 +1,1 @@
+import{_ as s,o as n,c as a,Q as l}from"./chunks/framework.fb3766a7.js";const b=JSON.parse('{"title":"布局","description":"","frontmatter":{},"headers":[],"relativePath":"fe/css/layout.md","lastUpdated":1707358331000}'),p={name:"fe/css/layout.md"},o=l("",43),e=[o];function t(r,c,D,F,y,i){return n(),a("div",null,e)}const E=s(p,[["render",t]]);export{b as __pageData,E as default};
