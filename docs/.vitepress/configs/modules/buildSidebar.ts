@@ -39,6 +39,8 @@ const sidebar = {
         { text: "代码分割", link: "/buildTools/vite/代码分割" },
         { text: "语法降级与Polyfill", link: "/buildTools/vite/语法降级与Polyfill" },
         { text: "性能优化", link: "/buildTools/vite/性能优化" },
+        { text: "迁移vite", link: "/buildTools/vite/迁移vite" },
+        { text: "首次启动慢", link: "/buildTools/vite/vite首次启动慢" },
       ],
     },
     {
