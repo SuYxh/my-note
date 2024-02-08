@@ -7,10 +7,10 @@ import chatgpt from "./modules/chatgpt";
 import pit from "./modules/pit";
 import me from "./modules/me";
 import computerBase from "./modules/computerBase";
-import sql from "./modules/sql";
+import afterEnd from "./modules/afterEnd";
 
 export const nav: DefaultTheme.Config["nav"] = [
-  { text: "我的项目", link: "/nav", activeMatch: "^/nav" },
+  { text: "项目", link: "/nav", activeMatch: "^/nav" },
   // 前端基础
   feBase,
   // 框架
@@ -19,7 +19,7 @@ export const nav: DefaultTheme.Config["nav"] = [
   // 构建部署
   build,
   // 数据库
-  sql,
+  afterEnd,
   // 工具
   tools,
   // 计算机基础

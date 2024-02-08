@@ -2,6 +2,10 @@ const data = {
   text: "工具",
   items: [
     {
+      text: "index",
+      items: [{ text: "index", link: "/tools/index" }],
+    },
+    {
       text: "开发常用",
       items: [
         { text: "第三方库", link: "/workflow/utils/library" },

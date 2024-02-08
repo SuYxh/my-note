@@ -1,14 +1,53 @@
 const sidebar = {
-  "/fe/concept/": [
+  "/fe/basicknowledge/": [
     {
-      text: "概念知识点",
+      text: "概念",
       collapsed: false,
       items: [
-        { text: "模块化", link: "/fe/concept/module" },
-        { text: "前端页面渲染方式", link: "/fe/concept/page-rendering" },
+        { text: "编程范式", link: "/fe/basicknowledge/concept/编程范式" },
+      ],
+    },
+    {
+      text: "浏览器相关",
+      collapsed: false,
+      items: [
+        { text: "浏览器知识", link: "/fe/basicknowledge/browser/浏览器知识" },
+        { text: "页面渲染方式", link: "/fe/basicknowledge/browser/页面渲染方式" },
+      ],
+    },
+    {
+      text: "网络知识",
+      collapsed: false,
+      items: [
+        { text: "简介", link: "/fe/basicknowledge/network/index.md" },
+        { text: "tcp", link: "/fe/basicknowledge/network/tcp.md" },
+        { text: "http", link: "/fe/basicknowledge/network/http.md" },
+      ],
+    },
+
+    {
+      text: "图片相关",
+      collapsed: false,
+      items: [
+        { text: "简介", link: "/fe/basicknowledge/image/index" },
+      ],
+    },
+    {
+      text: "音频相关",
+      collapsed: false,
+      items: [
+        { text: "简介", link: "/fe/basicknowledge/audio/index" },
+      ],
+    },
+    {
+      text: "视频相关",
+      collapsed: false,
+      items: [
+        { text: "简介", link: "/fe/basicknowledge/video/index" },
       ],
     },
   ],
+
   "/fe/html/": [
     {
       text: "html",
@@ -70,6 +109,7 @@ const sidebar = {
         { text: "闭包", link: "/fe/javascript/closure" },
         { text: "this", link: "/fe/javascript/this" },
         { text: "event loop", link: "/fe/javascript/eventloop" },
+        { text: "模块化", link: "/fe/javascript/module" },
         { text: "编程题", link: "/fe/coding/" },
       ],
     },
