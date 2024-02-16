@@ -284,7 +284,10 @@ const sidebar = {
           text: "类中如何使用类型",
           link: "/fe/typescript/advance/09-类中如何使用类型.md",
         },
-
+        {
+          text: "模板字符串类型",
+          link: "/fe/typescript/advance/10-模板字符串类型.md",
+        },
         {
           text: "d.ts声明文件和declare关键字",
           link: "/fe/typescript/advance/d点ts声明文件和declare关键字.md",
@@ -300,6 +303,24 @@ const sidebar = {
         {
           text: "详解tsconfigjson配置文件",
           link: "/fe/typescript/advance/详解tsconfigjson配置文件.md",
+        },
+        {
+          text: "配置你的TypeScript",
+          link: "/fe/typescript/advance/配置你的TypeScript.md",
+        },
+      ],
+    },
+    {
+      text: "内置工具类型",
+      collapsed: false,
+      items: [
+        {
+          text: "内置工具类型-1",
+          link: "/fe/typescript/tool/内置工具类型-1",
+        },
+        {
+          text: "内置工具类型-2",
+          link: "/fe/typescript/tool/内置工具类型-2",
         },
       ],
     },

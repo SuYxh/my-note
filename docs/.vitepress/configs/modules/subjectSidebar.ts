@@ -145,6 +145,16 @@ const sidebar = {
     },
   ],
 
+  "/subject/performance/": [
+    {
+      text: "vue",
+      collapsed: false,
+      items: [
+        { text: "vue性能优化", link: "/subject/performance/vue性能优化.md" },
+      ],
+    }
+  ],
+
   "/subject/harmonyOS/": [
     {
       text: "鸿蒙开发",

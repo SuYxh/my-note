@@ -14,6 +14,10 @@ const data = {
       link: "/subject/weixin/index",
     },
     {
+      text: "性能优化",
+      link: "/subject/performance/index",
+    },
+    {
       text: "数据结构与算法",
       link: "/subject/dataStructure/index",
     },
