@@ -382,6 +382,10 @@ const sidebar = {
       collapsed: false,
       items: [
         {
+          text: "对比学习",
+          link: "/frame/different/对比学习.md",
+        },
+        {
           text: "编程风格与视图风格",
           link: "/frame/different/02-React18与Vue3对比之编程风格与视图风格.md",
         },
