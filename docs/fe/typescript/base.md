@@ -30,7 +30,7 @@ let isFlag: boolean = true;
 
 ```ts
 let name: string = "dahuang";
-name = "茂茂";
+name = "大黄";
 ```
 
 #### number 数字类型
@@ -58,8 +58,8 @@ let big: bigint = 19961996n;
 
 ```ts
 let sym: symbol = Symbol("dahuang");
-sym = Symbol("茂茂"); // OK
-sym = "茂茂"; // Error
+sym = Symbol("大黄"); // OK
+sym = "大黄"; // Error
 ```
 
 ### `object`
@@ -98,7 +98,7 @@ create(undefined); // Error
 let value: any = 1;
 free = { name: "dahuang" };
 free.log();
-free = "茂茂";
+free = "大黄";
 ```
 
 :::warning 注意点
@@ -317,7 +317,7 @@ const person1: Person = {
 }
 // Error: "gender" 不在类型 "Person" 中
 const person2: Person = {
-  name: '茂茂',
+  name: '大黄',
   age: 18,
   gender: 'male'
 }
@@ -348,7 +348,7 @@ interface Person {
 
 // Error: "gender" 不在类型 "Person" 中
 const person: Person = {
-  name: '茂茂',
+  name: '大黄',
   age: 18,
   gender: 'male'
 }
@@ -384,7 +384,7 @@ interface Person {
 
 // Error: 属性 "age" 与索引签名不兼容，不能将类型 "number" 分配给类型 "string"
 const person: Person = {
-  name: '茂茂',
+  name: '大黄',
   age: 18,
   gender: 'male'
 }
@@ -400,7 +400,7 @@ interface Person {
 }
 
 const person: Person = {
-  name: "茂茂",
+  name: "大黄",
   age: 18,
   gender: "male",
 };
@@ -420,7 +420,7 @@ interface Person {
 
 const person: Person = {
   id: 1,
-  name: '茂茂',
+  name: '大黄',
   age: 18,
   gender: 'male'
 }
@@ -441,7 +441,7 @@ interface Person {
 
 // Error: 缺少属性 "id"
 const person: Person = {
-  name: '茂茂',
+  name: '大黄',
   age: 18,
   gender: 'male'
 }
@@ -470,7 +470,7 @@ type Person = {
 **字符串字面量类型**：
 
 ```ts
-type Name = "dahuang" | "dahuang1996" | "茂茂";
+type Name = "dahuang" | "dahuang1996" | "大黄";
 ```
 
 **数字字面量类型**：

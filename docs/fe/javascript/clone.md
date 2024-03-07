@@ -29,11 +29,11 @@ const obj1 = {
 };
 
 const obj2 = Object.assign({}, obj1);
-obj2.name = "茂茂";
+obj2.name = "大黄";
 obj2.props.a++;
 
 obj1; // { name: 'dahuang', props: { a: 2 } }
-obj2; // { name: '茂茂', props: { a: 2 } }
+obj2; // { name: '大黄', props: { a: 2 } }
 ```
 
 ### `Array.prototype.concat()`
@@ -72,11 +72,11 @@ const obj1 = {
 };
 
 const obj2 = { ...obj1 };
-obj2.name = "茂茂";
+obj2.name = "大黄";
 obj2.props.a++;
 
 obj1; // { name: 'dahuang', props: { a: 2 } }
-obj2; // { name: '茂茂', props: { a: 2 } }
+obj2; // { name: '大黄', props: { a: 2 } }
 
 /* 数组 */
 const arr1 = [1, 2, 3, [4, 5]];
@@ -104,11 +104,11 @@ const obj1 = {
 };
 
 const obj2 = JSON.parse(JSON.stringify(obj1));
-obj2.name = "茂茂";
+obj2.name = "大黄";
 obj2.props.a++;
 
 obj1; // { name: 'dahuang', props: { a: 1 } }
-obj2; // { name: '茂茂', props: { a: 2 } }
+obj2; // { name: '大黄', props: { a: 2 } }
 ```
 
 **`JSON.parse(JSON.stringify())` 存在明显的弊端：**
