@@ -39,7 +39,7 @@ export default defineConfig({
       label: "本页目录",
     },
 
-    socialLinks: [{ icon: "github", link: "https://github.com/SuYxh/my-note" }],
+    // socialLinks: [{ icon: "github", link: "https://github.com/SuYxh/my-note" }],
 
     footer: {
       message: "你相信光吗",

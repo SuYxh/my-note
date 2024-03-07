@@ -10,10 +10,10 @@ hero:
     src: /logo.png
     alt: MY-NOTE
   actions:
-    - text: Go -->
+    - text: 开始学习
       link: /fe/javascript/types
-    - text: 项目
-      link: /nav
+    - text: 关于我
+      link: /about
       theme: alt
 features:
   - icon: 📖
