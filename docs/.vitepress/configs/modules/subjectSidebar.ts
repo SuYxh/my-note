@@ -147,10 +147,33 @@ const sidebar = {
 
   "/subject/performance/": [
     {
+      text: "工具",
+      collapsed: false,
+      items: [
+        { text: "性能优化工具", link: "/subject/performance/工具.md" },
+        { text: "性能优化指标", link: "/subject/performance/性能优化指标.md" },
+      ],
+    },
+    {
+      text: "通用技巧",
+      collapsed: false,
+      items: [
+        { text: "性能优化策略", link: "/subject/performance/性能优化策略.md" },
+      ],
+    },
+    {
       text: "vue",
       collapsed: false,
       items: [
-        { text: "vue性能优化", link: "/subject/performance/vue性能优化.md" },
+        { text: "vue性能优化-1", link: "/subject/performance/vue性能优化-1.md" },
+        { text: "vue性能优化-2", link: "/subject/performance/vue性能优化-2.md" },
+      ],
+    },
+    {
+      text: "资源",
+      collapsed: false,
+      items: [
+        { text: "资源", link: "/subject/performance/资源.md" },
       ],
     }
   ],
