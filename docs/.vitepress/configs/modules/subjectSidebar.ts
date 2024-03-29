@@ -1,4 +1,15 @@
 const sidebar = {
+  "/subject/mobile/": [
+    {
+      text: "移动端开发",
+      collapsed: false,
+      items: [
+        { text: "简介", link: "/subject/mobile/index" },
+        { text: "H5唤起小程序", link: "/subject/mobile/微信端外H5跳转小程序方案汇总" },
+        { text: "H5唤起APP", link: "/subject/mobile/H5唤起APP" },
+      ],
+    },
+  ],
 
   "/subject/chatGPT/": [
     {
@@ -24,7 +35,10 @@ const sidebar = {
     {
       text: "开发",
       collapsed: false,
-      items: [{ text: "开发指南", link: "/subject/chatGPT/develop/index" }],
+      items: [
+        { text: "开发指南", link: "/subject/chatGPT/develop/index" },
+        { text: "SSE", link: "/subject/chatGPT/develop/SSE服务端实时推送消息" },
+      ],
     },
     {
       text: "学习",

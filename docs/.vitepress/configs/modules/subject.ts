@@ -6,6 +6,10 @@ const data = {
       link: "/subject/chatGPT/index",
     },
     {
+      text: "移动端",
+      link: "/subject/mobile/index",
+    },
+    {
       text: "鸿蒙开发",
       link: "/subject/harmonyOS/index",
     },
