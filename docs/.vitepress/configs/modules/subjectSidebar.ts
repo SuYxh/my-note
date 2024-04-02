@@ -30,6 +30,7 @@ const sidebar = {
         { text: "chatGPT平台", link: "/subject/chatGPT/use/使用资源" },
         { text: "Prompt编写", link: "/subject/chatGPT/use/Prompt" },
         { text: "Prompt资源", link: "/subject/chatGPT/use/Prompt资源" },
+        { text: "搭建OpenAI的API代理", link: "/subject/chatGPT/use/搭建OpenAI的API代理" },
       ],
     },
     {
