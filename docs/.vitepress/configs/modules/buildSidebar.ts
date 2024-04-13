@@ -98,6 +98,12 @@ const sidebar = {
         { text: "简介", link: "/engineering/deploy/docker/简介" },
         { text: "安装", link: "/engineering/deploy/docker/docker安装" },
         { text: "使用", link: "/engineering/deploy/docker/docker使用" },
+        { text: "部署Vue项目", link: "/engineering/deploy/docker/Docker部署Vue项目" },
+        { text: "部署node-基础版", link: "/engineering/deploy/docker/Docker部署node-基础版" },
+        { text: "部署node-环境变量", link: "/engineering/deploy/docker/Docker部署node-env" },
+        { text: "部署node-挂载", link: "/engineering/deploy/docker/Docker部署node-volume" },
+        { text: "部署express和MySQL", link: "/engineering/deploy/docker/Docker部署express和MySQL" },
+        { text: "部署express和MySQL和Redis", link: "/engineering/deploy/docker/Docker部署express和MySQL和Redis" },
       ],
     },
     {
