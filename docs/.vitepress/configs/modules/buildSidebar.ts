@@ -3,7 +3,12 @@ const sidebar = {
     {
       text: "包管理工具",
       collapsed: false,
-      items: [{ text: "npm", link: "/engineering/package/npm" }],
+      items: [
+        { text: "npm", link: "/engineering/package/npm" },
+        { text: "npm link", link: "/engineering/package/npm link" },
+        { text: "常用字段", link: "/engineering/package/packagesjson常用的配置字段" }
+
+      ],
     },
   ],
 
