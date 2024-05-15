@@ -57,6 +57,7 @@ const sidebar = {
         { text: "性能优化", link: "/engineering/buildTools/vite/性能优化" },
         { text: "迁移vite", link: "/engineering/buildTools/vite/迁移vite" },
         { text: "首次启动慢", link: "/engineering/buildTools/vite/vite首次启动慢" },
+        { text: "常见配置", link: "/engineering/buildTools/vite/常见配置" },
       ],
     },
     {

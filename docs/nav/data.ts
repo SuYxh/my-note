@@ -6,6 +6,13 @@ export const NAV_DATA: NavData[] = [
     items: [
       {
         icon: "https://qn.huat.xyz/mac/202309071106964.png",
+        title: "ChatGPT Web Sea",
+        desc: "基于 chatgpt-web 兼容 LLM Red Team 项目下所有的 free-api 以及 one-api 或 new-api提供的接口和 key",
+        link: "http://sea.vuejs.news/",
+        repo: "https://github.com/SuYxh/chatgpt-web-sea",
+      },
+      {
+        icon: "https://qn.huat.xyz/mac/202309071106964.png",
         title: "ChatGPT Web",
         desc: "多模型支持、自定义key、流式返回数据、手机验证码、微信扫码登录",
         link: "https://ask.vuejs.news/#/",
@@ -75,12 +82,20 @@ export const NAV_DATA: NavData[] = [
         link: "https://super-zuccutto-ae4aaf.netlify.app/",
         repo: "https://github.com/SuYxh/utils#readme",
       },
-      // {
-      //   icon: "https://qn.huat.xyz/mac/202309071131329.png",
-      //   title: "UI 库",
-      //   desc: "一个还在开发的组件库",
-      //   link: "https://www.npmjs.com/package/iron-ui",
-      // },
+      {
+        icon: "https://qn.huat.xyz/mac/202405152229597.png",
+        title: "Vue组件库",
+        desc: "Vue3.3 + Typescript4 + Vite + Vitest + vitepress + Vue-test-utils2 + Rollup + Postcss",
+        link: "https://suyxh.github.io/vue-ui/",
+        repo: "https://github.com/SuYxh/vue-ui",
+      },
+      {
+        icon: "https://qn.huat.xyz/mac/202405152229963.png",
+        title: "React组件库",
+        desc: "typescript with React Hooks， 使用 react-doc-gen 自动生成文档",
+        link: "https://suyxh.github.io/react-ui/",
+        repo: "https://github.com/SuYxh/react-ui",
+      },
       {
         icon: "https://qn.huat.xyz/mac/202308191938912.png",
         title: "AIGC - Yao",
