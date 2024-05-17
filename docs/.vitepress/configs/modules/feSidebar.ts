@@ -125,6 +125,7 @@ const sidebar = {
         { text: "事件处理程序", link: "/fe/javascript/event/事件处理程序" },
         { text: "事件对象", link: "/fe/javascript/event/事件对象" },
         { text: "事件类型", link: "/fe/javascript/event/事件类型" },
+        { text: "beforeunload", link: "/fe/javascript/event/beforeunload" },
       ],
     },
     {
