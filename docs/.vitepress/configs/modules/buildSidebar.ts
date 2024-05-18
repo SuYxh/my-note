@@ -18,7 +18,8 @@ const sidebar = {
       collapsed: false,
       items: [
         { text: "简介", link: "/engineering/standard/index" },
-        { text: "代码规范", link: "/engineering/standard/代码规范" }
+        { text: "代码规范", link: "/engineering/standard/代码规范" },
+        { text: "Vue3项目代码规范", link: "/engineering/standard/Vue3项目代码规范" }
       ],
     },
   ],
