@@ -1,0 +1,1 @@
+import{_ as t,c as e,o,V as s}from"./chunks/framework.hxTji2_l.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"about.md","filePath":"about.md","lastUpdated":1716393985000}'),r={name:"about.md"},a=s("",2),n=[a];function i(l,_,c,g,d,u){return o(),e("div",null,n)}const h=t(r,[["render",i]]);export{m as __pageData,h as default};
