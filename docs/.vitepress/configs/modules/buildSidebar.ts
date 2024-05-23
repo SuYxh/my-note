@@ -6,8 +6,9 @@ const sidebar = {
       items: [
         { text: "npm", link: "/engineering/package/npm" },
         { text: "npm link", link: "/engineering/package/npm link" },
-        { text: "常用字段", link: "/engineering/package/packagesjson常用的配置字段" }
-
+        { text: "常用字段", link: "/engineering/package/packagesjson常用的配置字段" },
+        { text: "符号", link: "/engineering/package/符号" },
+        { text: "npm转pnpm", link: "/engineering/package/npm转pnpm" },
       ],
     },
   ],
@@ -59,12 +60,16 @@ const sidebar = {
         { text: "迁移vite", link: "/engineering/buildTools/vite/迁移vite" },
         { text: "首次启动慢", link: "/engineering/buildTools/vite/vite首次启动慢" },
         { text: "常见配置", link: "/engineering/buildTools/vite/常见配置" },
+        { text: "配置多页应用", link: "/engineering/buildTools/vite/vite配置多页应用" },
       ],
     },
     {
       text: "webpack",
       collapsed: false,
-      items: [{ text: "webpack", link: "/engineering/buildTools/webpack/" }],
+      items: [
+        { text: "webpack", link: "/engineering/buildTools/webpack/" },
+        { text: "配置多页应用", link: "/engineering/buildTools/webpack/webpack配置多页应用" },
+      ],
     },
   ],
 
