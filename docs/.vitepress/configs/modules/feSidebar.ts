@@ -74,6 +74,7 @@ const sidebar = {
         { text: "响应式", link: "/fe/css/responsive" },
         { text: "CSS3", link: "/fe/css/css3" },
         { text: "技巧", link: "/fe/css/tricks" },
+        { text: "web文本范围高亮", link: "/fe/css/web文本范围高亮" },
       ],
     },
     {
