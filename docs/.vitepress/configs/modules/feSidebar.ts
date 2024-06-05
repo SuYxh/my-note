@@ -75,6 +75,7 @@ const sidebar = {
         { text: "CSS3", link: "/fe/css/css3" },
         { text: "技巧", link: "/fe/css/tricks" },
         { text: "web文本范围高亮", link: "/fe/css/web文本范围高亮" },
+        { text: "CSS显式默认值-inherit&initial&unset&revert", link: "/fe/css/CSS显式默认值-inherit&initial&unset&revert" },
       ],
     },
     {
