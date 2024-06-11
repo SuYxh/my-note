@@ -11,6 +11,7 @@ const sidebar = {
       text: "浏览器相关",
       collapsed: false,
       items: [
+        { text: "浏览器内核", link: "/fe/basicknowledge/browser/浏览器内核" },
         { text: "浏览器知识", link: "/fe/basicknowledge/browser/浏览器知识" },
         { text: "页面渲染方式", link: "/fe/basicknowledge/browser/页面渲染方式" },
       ],
