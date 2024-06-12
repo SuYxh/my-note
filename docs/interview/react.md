@@ -189,7 +189,7 @@ React 事件机制总结如下:
 
 在组件内直接使用
 
-```react
+```js
 import React, { Component } from "react";
 
 const div1 = {
@@ -365,7 +365,7 @@ Refs 在计算机中称为弹性文件系统 (英语: Resilient File System，�
 
 - 传入字符串，使用时通过 this.refs.传入的字符串的格式获取对应的元素
 
-  ```react
+  ```js
   import React from "react";
   
   class MyComponent extends React.Component {
@@ -386,7 +386,7 @@ Refs 在计算机中称为弹性文件系统 (英语: Resilient File System，�
 
 - 传入对象，对象是通过 React.createRef() 方式创建出来，使用时获取到创建的对象中存在current 属性就是对应的元素
 
-  ```react
+  ```js
   import React from "react";
   
   class MyComponent extends React.Component {
