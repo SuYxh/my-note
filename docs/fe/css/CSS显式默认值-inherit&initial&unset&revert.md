@@ -539,7 +539,7 @@ h2 {
 
 最后再来看 `revert` 关键词，把 `h2` 中的 `color` 、`border` 、`margin` 和 `padding` 等属性的值设置为 `revert` ：
 
-```undefined
+```css
 h2 {
    color: revert;
    border: revert;
