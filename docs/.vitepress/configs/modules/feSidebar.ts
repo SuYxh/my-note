@@ -146,6 +146,7 @@ const sidebar = {
         { text: "编程题", link: "/fe/coding/" },
         { text: "字符串方法", link: "/fe/javascript/字符串方法" },
         { text: "数组方法", link: "/fe/javascript/数组方法" },
+        { text: "常用技巧", link: "/fe/javascript/JS技巧" },
       ],
     },
     {

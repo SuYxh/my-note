@@ -7,6 +7,7 @@ const sidebar = {
         { text: "简介", link: "/subject/mobile/index" },
         { text: "H5唤起小程序", link: "/subject/mobile/微信端外H5跳转小程序方案汇总" },
         { text: "H5唤起APP", link: "/subject/mobile/H5唤起APP" },
+        { text: "移动端常见问题", link: "/subject/mobile/移动端常见问题" },
       ],
     },
   ],
