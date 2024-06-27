@@ -143,10 +143,12 @@ const sidebar = {
         { text: "this", link: "/fe/javascript/this" },
         { text: "event loop", link: "/fe/javascript/eventloop" },
         { text: "模块化", link: "/fe/javascript/module" },
-        { text: "编程题", link: "/fe/coding/" },
+        { text: "二进制", link: "/fe/javascript/谈谈JS二进制" },
+        // { text: "严格模式", link: "/fe/javascript/js严格模式" },
         { text: "字符串方法", link: "/fe/javascript/字符串方法" },
         { text: "数组方法", link: "/fe/javascript/数组方法" },
         { text: "常用技巧", link: "/fe/javascript/JS技巧" },
+        { text: "编程题", link: "/fe/coding/" },
       ],
     },
     {
