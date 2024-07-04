@@ -144,6 +144,8 @@ const sidebar = {
         { text: "event loop", link: "/fe/javascript/eventloop" },
         { text: "模块化", link: "/fe/javascript/module" },
         { text: "二进制", link: "/fe/javascript/谈谈JS二进制" },
+        { text: "垃圾回收", link: "/fe/javascript/垃圾回收" },
+        { text: "运行机制", link: "/fe/javascript/运行机制" },
         // { text: "严格模式", link: "/fe/javascript/js严格模式" },
         { text: "字符串方法", link: "/fe/javascript/字符串方法" },
         { text: "数组方法", link: "/fe/javascript/数组方法" },
