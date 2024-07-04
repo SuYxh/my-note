@@ -168,6 +168,7 @@ const sidebar = {
       items: [
         { text: "xhr", link: "/fe/javascript/xhr/xhr" },
         { text: "Fetch", link: "/fe/javascript/xhr/Fetch" },
+        { text: "axios", link: "/fe/javascript/xhr/axios" },
         { text: "跨域", link: "/fe/javascript/xhr/跨域" },
         { text: "CORS", link: "/fe/javascript/xhr/CORS" },
         { text: "缓存", link: "/fe/javascript/xhr/缓存" },
