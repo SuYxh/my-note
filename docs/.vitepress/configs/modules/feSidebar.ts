@@ -233,8 +233,12 @@ const sidebar = {
       collapsed: false,
       items: [
         {
-          text: "ECMAScript 6",
+          text: "基础",
           link: "/fe/es6/",
+        },
+        {
+          text: "进阶",
+          link: "/fe/es6/ES6",
         },
       ],
     },
