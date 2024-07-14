@@ -201,6 +201,17 @@ const sidebar = {
       items: [{ text: "简介", link: "/subject/harmonyOS/index" }],
     },
   ],
+
+  "/subject/vscodePlugin/": [
+    {
+      text: "vscode插件开发",
+      collapsed: false,
+      items: [
+        { text: "简介", link: "/subject/vscodePlugin/index" },
+        { text: "多级子菜单", link: "/subject/vscodePlugin/多级子菜单" },
+      ],
+    },
+  ],
 };
 
 export default sidebar;

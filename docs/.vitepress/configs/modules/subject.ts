@@ -22,6 +22,10 @@ const data = {
       link: "/subject/performance/index",
     },
     {
+      text: "vscode插件",
+      link: "/subject/vscodePlugin/index",
+    },
+    {
       text: "数据结构与算法",
       link: "/subject/dataStructure/index",
     },

@@ -17,6 +17,14 @@ const sidebar = {
           link: "/frame/vue/base/04-Vue3语法系统进阶.md",
         },
         {
+          text: "Vue2高级用法",
+          link: "/frame/vue/base/Vue2高级用法.md",
+        },
+        {
+          text: "vue3新特性",
+          link: "/frame/vue/base/vue3新特性.md",
+        },
+        {
           text: "Vue3组合式API详解",
           link: "/frame/vue/base/05-Vue3组合式API详解.md",
         },
@@ -27,6 +35,10 @@ const sidebar = {
       text: "路由",
       collapsed: true,
       items: [
+        {
+          text: "vue-router",
+          link: "/frame/vue/路由/vue-router.md",
+        },
         {
           text: "路由的基本搭建与嵌套路由模式",
           link: "/frame/vue/路由/03-路由的基本搭建与嵌套路由模式.md",
@@ -59,6 +71,10 @@ const sidebar = {
       collapsed: true,
       items: [
         {
+          text: "Vuex",
+          link: "/frame/vue/vuex/vuex.md",
+        },
+        {
           text: "Vuex共享状态的基本开发流程",
           link: "/frame/vue/vuex/10-Vuex共享状态的基本开发流程.md",
         },
@@ -90,6 +106,12 @@ const sidebar = {
           link: "/frame/vue/base/02-Vue3核心概念及选项式API.md",
         },
       ],
+    },
+
+    {
+      text: "SSR",
+      collapsed: true,
+      items: [{ text: "简介", link: "/frame/vue/ssr/index" }],
     },
 
     {
