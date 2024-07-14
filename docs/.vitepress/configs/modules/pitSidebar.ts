@@ -31,6 +31,10 @@ const sidebar = {
       collapsed: false,
       items: [
         {
+          text: "常用片段",
+          link: "/pit/commonFunc/常用代码片段",
+        },
+        {
           text: "禁止浏览器快捷键保存页面",
           link: "/pit/commonFunc/禁止浏览器快捷键保存页面",
         },
