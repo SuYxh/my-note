@@ -138,6 +138,14 @@ const sidebar = {
       collapsed: true,
       items: [
         {
+          text: "react基础",
+          link: "/frame/react/base/react基础.md",
+        },
+        {
+          text: "react高级",
+          link: "/frame/react/base/react高级.md",
+        },
+        {
           text: "虚拟DOM与React18新的渲染写法",
           link: "/frame/react/base/02-虚拟DOM与React18新的渲染写法.md",
         },
@@ -272,6 +280,10 @@ const sidebar = {
       collapsed: true,
       items: [
         {
+          text: "react-router",
+          link: "/frame/react/ReactRouter/react-router.md",
+        },
+        {
           text: "ReactRouterV6基础路由搭建",
           link: "/frame/react/ReactRouter/02-ReactRouterV6基础路由搭建.md",
         },
@@ -302,6 +314,10 @@ const sidebar = {
       text: "状态管理",
       collapsed: true,
       items: [
+        {
+          text: "react状态管理",
+          link: "/frame/react/redux/react状态管理.md",
+        },
         {
           text: "Redux状态管理的基本流程",
           link: "/frame/react/redux/08-Redux状态管理的基本流程.md",
@@ -337,6 +353,17 @@ const sidebar = {
         {
           text: "类组件中如何使用路由和状态管理",
           link: "/frame/react/redux/16-类组件中如何使用路由和状态管理.md",
+        },
+      ],
+    },
+
+    {
+      text: "SSR",
+      collapsed: true,
+      items: [
+        {
+          text: "react-ssr",
+          link: "/frame/react/ssr/react-ssr.md",
         },
       ],
     },
