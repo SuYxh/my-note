@@ -19,8 +19,13 @@ const sidebar = {
       collapsed: false,
       items: [
         { text: "简介", link: "/engineering/standard/index" },
-        { text: "代码规范", link: "/engineering/standard/代码规范" },
-        { text: "Vue3项目代码规范", link: "/engineering/standard/Vue3项目代码规范" }
+        { text: "ESlint配置以及插件开发", link: "/engineering/standard/1-ESlint配置以及插件开发" },
+        { text: "Prettier配置", link: "/engineering/standard/2-Prettier配置" },
+        { text: "Stylelint配置", link: "/engineering/standard/3-Stylelint配置" },
+        { text: "Git提交配置", link: "/engineering/standard/4-git提交配置" },
+        { text: "发布配置", link: "/engineering/standard/5-release-it" },
+        // { text: "代码规范", link: "/engineering/standard/代码规范" },
+        // { text: "Vue3项目代码规范", link: "/engineering/standard/Vue3项目代码规范" }
       ],
     },
   ],
