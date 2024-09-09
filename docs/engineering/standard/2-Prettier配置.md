@@ -132,6 +132,16 @@ module.exports = {
    */
   "editor.tabSize": 2,
   "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "vue"
+  ],
   /*
    * @description stylelint 配置
    * @param autoFixOnSave 保存时自动修复

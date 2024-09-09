@@ -1,13 +1,13 @@
-
+> https://github.com/SuYxh/format-practice
 
 ## ESlint配置
 
-`ESLint` 是在 `ECMAScript/JavaScript` 代码中识别和报告模式匹配的工具，它的目标是保证代码的一致性和避免错误,我们来看一下如何在我们的项目中使用它
+`ESLint` 是在 `ECMAScript/JavaScript` 代码中识别和报告模式匹配的工具，它的目标是保证代码的一致性和避免错误,我们来看一下如何在我们的项目中使用它。
 
 ### 安装依赖
 
 ```csharp
-pnpm add -D eslint@8.35.0  @typescript-eslint/eslint-plugin@5.54.0 @typescript-eslint/parser@5.54.0 @eslint-plugin-vue@9.9.0
+pnpm add -D eslint@8.35.0  @typescript-eslint/eslint-plugin@5.54.0 @typescript-eslint/parser@5.54.0 @eslint-plugin-vue@9.9.0 eslint-plugin-unused-imports@^4.1.3
 ```
 
 这是我使用到的版本，如果不锁定版本，eslint的配置方式可能会有些变化，会有很多莫名其妙的问题。其中的 `typescript` 版本是 `5.1.6` 。
@@ -32,7 +32,9 @@ pnpm add -D eslint@8.35.0  @typescript-eslint/eslint-plugin@5.54.0 @typescript-e
 
 - 专为Vue文件设计的ESLint插件，提供了一系列规则来帮助你保持Vue代码的质量和规范性。
 
+**eslint-plugin-unused-imports@^4.1.3**:
 
+- 是一个 ESLint 插件，用于检测和自动修复未使用的导入（imports）
 
 
 
@@ -80,7 +82,9 @@ module.exports = {
     // 添加 Vue.js 相关的规则，使用这个插件需要安装eslint-plugin-vue
     'vue', 
     // 添加 TypeScript 相关的规则，使用这个插件需要安装@typescript-eslint/eslint-plugin和@typescript-eslint/parser
-    '@typescript-eslint'
+    '@typescript-eslint',
+    // 未使用导入检查
+    'unused-imports'
   ],
   rules: {
     // 禁用 @ts-ignore、@ts-nocheck、@ts-check 等 TypeScript 特定的注释
@@ -93,9 +97,28 @@ module.exports = {
       'varsIgnorePattern': '^_',
       'ignoreRestSiblings': true 
     }],
+ 		// 未使用导入检查
+    'unused-imports/no-unused-imports': 'error'
   }
 };
 ```
+
+> 要想实现保存时自动删除未使用的导入，还需要配置 vscode
+>
+> ```json
+> "editor.codeActionsOnSave": {
+>   "source.fixAll.eslint": "explicit"
+> },
+> "eslint.validate": [
+>   "javascript",
+>   "javascriptreact",
+>   "typescript",
+>   "typescriptreact",
+>   "vue"
+> ],
+> ```
+
+
 
 #### extends 和 plugins 的使用
 
