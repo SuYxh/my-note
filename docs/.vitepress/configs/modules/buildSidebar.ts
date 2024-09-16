@@ -73,6 +73,11 @@ const sidebar = {
       collapsed: false,
       items: [
         { text: "webpack", link: "/engineering/buildTools/webpack/" },
+        { text: "构建流程", link: "/engineering/buildTools/webpack/构建流程" },
+        { text: "热更新", link: "/engineering/buildTools/webpack/热更新" },
+        { text: "vue-热更新", link: "/engineering/buildTools/webpack/vue-热更新" },
+        { text: "打包优化案例", link: "/engineering/buildTools/webpack/打包优化案例" },
+        { text: "性能优化", link: "/engineering/buildTools/webpack/性能优化" },
         { text: "配置多页应用", link: "/engineering/buildTools/webpack/webpack配置多页应用" },
       ],
     },

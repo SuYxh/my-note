@@ -2,6 +2,26 @@
 
 [`flex`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex) 是一个 `CSS` 简写属性，用于设置 `Flex` 项目如何增大或缩小以适应其 `Flex` 容器中可用的空间
 
+`flex: 1` 等价于：
+
+```css
+flex-grow: 1;
+flex-shrink: 1;
+flex-basis: 0%;
+```
+
+**`flex-grow: 1`**：当父容器有剩余空间时，子元素会按比例放大，这里的比例系数为 1。
+
+**`flex-shrink: 1`**：当父容器空间不足时，子元素会按比例缩小，比例系数为 1。
+
+**`flex-basis: 0%`**：指定了子元素的初始主轴尺寸为 0，这意味着尺寸主要由 `flex-grow` 和 `flex-shrink` 来决定。
+
+
+
+使用 `flex: 1` 可以使多个子元素在弹性容器中平均分配空间，无论容器的尺寸如何变化，子元素都会相应地调整自己的尺寸以适应容器。
+
+
+
 ::: tip `flex` 是 `flex-grow` `flex-shrink` `flex-basis` 属性的简写
 
 - [flex-grow](https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex-grow) 用于**设置 `flex` 项目的增长系数**
