@@ -264,6 +264,10 @@ React.createContext
 
 
 
+在 React 中一共有五种通信方式，分别是：**props 和 callback、context（跨层级）、Event 事件、ref传递、状态管理（如：mobx 等）** 方式。
+
+
+
 ### 12、说说你对高阶组件的理解和应用场景
 
 高阶函数 (Higher-order function)至少满足下列一个条件的函数
