@@ -52,6 +52,7 @@ const sidebar = {
       collapsed: false,
       items: [
         { text: "简介", link: "/engineering/buildTools/vite/index" },
+        { text: "热更新", link: "/engineering/buildTools/vite/热更新" },
         { text: "模块化知识", link: "/engineering/buildTools/vite/模块化" },
         { text: "如何处理css", link: "/engineering/buildTools/vite/如何处理css" },
         { text: "如何处理静态资源", link: "/engineering/buildTools/vite/如何处理静态资源" },
@@ -72,6 +73,7 @@ const sidebar = {
       text: "webpack",
       collapsed: false,
       items: [
+        { text: "插件架构", link: "/engineering/buildTools/webpack/插件架构" },
         { text: "webpack", link: "/engineering/buildTools/webpack/" },
         { text: "构建流程", link: "/engineering/buildTools/webpack/构建流程" },
         { text: "热更新", link: "/engineering/buildTools/webpack/热更新" },
