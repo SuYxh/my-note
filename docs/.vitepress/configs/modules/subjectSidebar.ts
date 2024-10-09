@@ -56,6 +56,7 @@ const sidebar = {
       items: [
         { text: "概念", link: "/subject/dataStructure/array/index" },
         { text: "题目", link: "/subject/dataStructure/array/topic" },
+        { text: "刷题思考", link: "/subject/dataStructure/array/刷题思考" },
       ],
     },
     {

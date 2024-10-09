@@ -100,7 +100,10 @@ const sidebar = {
     {
       text: "Nginx",
       collapsed: false,
-      items: [{ text: "配置https", link: "/engineering/deploy/nginx/nginx配置https" }],
+      items: [
+        { text: "配置https", link: "/engineering/deploy/nginx/nginx配置https" },
+        { text: "Nginx配置文件详解", link: "/engineering/deploy/nginx/Nginx配置文件详解" },
+      ],
     },
     {
       text: "Github Action",
