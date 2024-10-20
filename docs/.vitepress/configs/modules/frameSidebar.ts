@@ -318,6 +318,24 @@ const sidebar = {
           text: "react状态管理",
           link: "/frame/react/redux/react状态管理.md",
         },
+
+        {
+          text: "redux",
+          link: "/frame/react/redux/redux.md",
+        },
+        {
+          text: "reduxjs-toolkit",
+          link: "/frame/react/redux/reduxjs-toolkit.md",
+        },
+        {
+          text: "mobx",
+          link: "/frame/react/redux/mobx.md",
+        },
+        {
+          text: "zustand",
+          link: "/frame/react/redux/zustand.md",
+        },
+
         {
           text: "Redux状态管理的基本流程",
           link: "/frame/react/redux/08-Redux状态管理的基本流程.md",
