@@ -4,6 +4,7 @@ const sidebar = {
       text: "概念",
       collapsed: false,
       items: [
+        { text: "前端开发的道、术、器", link: "/fe/basicknowledge/concept/前端开发的道、术、器.md" },
         { text: "编程范式", link: "/fe/basicknowledge/concept/编程范式" },
       ],
     },
