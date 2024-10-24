@@ -250,141 +250,79 @@ const sidebar = {
       collapsed: false,
       items: [
         {
-          text: "为什么使用TS和TS运行环境搭建",
-          link: "/fe/typescript/base/02-为什么使用TS和TS运行环境搭建.md",
+          text: "Typescript 基础知识",
+          link: "/fe/typescript/base/Typescript 基础知识.md",
         },
         {
-          text: "类型声明空间与变量声明空间",
-          link: "/fe/typescript/base/03-类型声明空间与变量声明空间.md",
+          text: "TS 中类型的使用",
+          link: "/fe/typescript/base/TS 中类型的使用.md",
         },
         {
-          text: "类型注解与类型推断",
-          link: "/fe/typescript/base/04-类型注解与类型推断.md",
+          text: "条件类型与映射类型",
+          link: "/fe/typescript/base/条件类型与映射类型.md",
         },
         {
-          text: "类型分类与联合类型与交叉类型",
-          link: "/fe/typescript/base/05-类型分类与联合类型与交叉类型.md",
+          text: "模块及命名空间使用",
+          link: "/fe/typescript/base/模块及命名空间使用.md",
         },
         {
-          text: "never类型与any类型与unknown类型",
-          link: "/fe/typescript/base/06-never类型与any类型与unknown类型.md",
+          text: "类型体操",
+          link: "/fe/typescript/base/类型体操.md",
         },
         {
-          text: "类型断言与非空断言",
-          link: "/fe/typescript/base/07-类型断言与非空断言.md",
+          text: "模板字符串以及装饰器",
+          link: "/fe/typescript/base/模板字符串以及装饰器.md",
         },
         {
-          text: "数组类型与元组类型",
-          link: "/fe/typescript/base/08-数组类型与元组类型.md",
-        },
-        {
-          text: "对象类型与索引签名",
-          link: "/fe/typescript/base/09-对象类型与索引签名.md",
-        },
-        {
-          text: "函数类型与void类型",
-          link: "/fe/typescript/base/10-函数类型与void类型.md",
-        },
-        {
-          text: "函数重载与可调用注解",
-          link: "/fe/typescript/base/11-函数重载与可调用注解.md",
-        },
-        {
-          text: "枚举类型与const枚举",
-          link: "/fe/typescript/base/12-枚举类型与const枚举.md",
+          text: "TSConfig 详解",
+          link: "/fe/typescript/base/TSConfig 详解.md",
         },
       ],
     },
     {
       text: "进阶",
-      collapsed: true,
+      collapsed: false,
       items: [
         {
-          text: "详解接口与类型别名之间区别",
-          link: "/fe/typescript/advance/02-详解接口与类型别名之间区别.md",
+          text: "泛型约束",
+          link: "/fe/typescript/advance/泛型约束.md",
         },
         {
-          text: "字面量类型和keyof关键字",
-          link: "/fe/typescript/advance/03-字面量类型和keyof关键字.md",
+          text: "函数的逆变与协变",
+          link: "/fe/typescript/advance/函数的逆变与协变.md",
         },
         {
-          text: "类型保护与自定义类型保护",
-          link: "/fe/typescript/advance/04-类型保护与自定义类型保护.md",
+          text: "函数重载",
+          link: "/fe/typescript/advance/函数重载.md",
         },
         {
-          text: "定义泛型和泛型常见操作",
-          link: "/fe/typescript/advance/05-定义泛型和泛型常见操作.md",
+          text: "类型映射",
+          link: "/fe/typescript/advance/类型映射.md",
         },
         {
-          text: "类型兼容性详解",
-          link: "/fe/typescript/advance/06-类型兼容性详解.md",
+          text: "内置类型",
+          link: "/fe/typescript/advance/内置类型.md",
         },
         {
-          text: "映射类型与内置工具类型",
-          link: "/fe/typescript/advance/07-映射类型与内置工具类型.md",
+          text: "条件类型-分发",
+          link: "/fe/typescript/advance/条件类型-分发.md",
         },
         {
-          text: "条件类型和infer关键字",
-          link: "/fe/typescript/advance/08-条件类型和infer关键字.md",
+          text: "declare",
+          link: "/fe/typescript/advance/declare.md",
         },
         {
-          text: "类中如何使用类型",
-          link: "/fe/typescript/advance/09-类中如何使用类型.md",
-        },
-        {
-          text: "模板字符串类型",
-          link: "/fe/typescript/advance/10-模板字符串类型.md",
-        },
-        {
-          text: "d.ts声明文件和declare关键字",
-          link: "/fe/typescript/advance/d点ts声明文件和declare关键字.md",
-        },
-        {
-          text: "@types和DefinitelyTyped仓库",
-          link: "/fe/typescript/advance/@types和DefinitelyTyped仓库.md",
-        },
-        {
-          text: "lib.d.ts和global.d.ts",
-          link: "/fe/typescript/advance/lib_d_ts和global_d_ts.md",
-        },
-        {
-          text: "详解tsconfigjson配置文件",
-          link: "/fe/typescript/advance/详解tsconfigjson配置文件.md",
-        },
-        {
-          text: "配置你的TypeScript",
-          link: "/fe/typescript/advance/配置你的TypeScript.md",
+          text: "infer",
+          link: "/fe/typescript/advance/infer.md",
         },
       ],
     },
     {
-      text: "内置工具类型",
+      text: "其他文章",
       collapsed: false,
       items: [
         {
-          text: "内置工具类型-1",
-          link: "/fe/typescript/tool/内置工具类型-1",
-        },
-        {
-          text: "内置工具类型-2",
-          link: "/fe/typescript/tool/内置工具类型-2",
-        },
-      ],
-    },
-    {
-      text: "其他",
-      collapsed: false,
-      items: [
-        {
-          text: "简介",
-          link: "/fe/typescript/index",
-        },
-        {
-          text: "typescript",
-          link: "/fe/typescript/base",
-        },
-        {
-          text: "ts-study",
+          text: "一篇搞懂 TS",
           link: "/fe/typescript/ts-study",
         },
       ],
