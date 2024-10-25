@@ -3,7 +3,10 @@ const sidebar = {
     {
       text: "基础",
       collapsed: false,
-      items: [{ text: "简介", link: "/afterEnd/node/index" }],
+      items: [
+        { text: "简介", link: "/afterEnd/node/index" },
+        { text: "进程与线程", link: "/afterEnd/node/进程与线程" }
+      ],
     },
   ],
 
